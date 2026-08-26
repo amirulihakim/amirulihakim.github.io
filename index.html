@@ -1,17 +1,271 @@
-<!DOCTYPE html>
-<html lang = "en">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    My Portofolio
-  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Amirul Hakim — Mechanical Engineering, Industrial Automation, IIoT, and Mechatronics portfolio." />
+  <title>Amirul Hakim — Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>
-    Hello World!
-  </h1>
-  <p>
-    First Github Page!
-  </p>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Amirul Hakim home">AH</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">ENGINEERING PORTFOLIO</p>
+          <h1>Amirul Hakim</h1>
+          <p class="hero-role">Mechanical Engineer · Industrial Automation · IIoT · Mechatronics</p>
+          <p class="hero-copy">
+            I build at the intersection of mechanical systems, industrial data, and automation —
+            from CAD and manufacturing documentation to instrumentation, SQL-backed monitoring,
+            PLC systems, and robotics.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View projects</a>
+            <a class="button button-ghost" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Current focus">
+          <p class="panel-label">CURRENT FOCUS</p>
+          <ul class="focus-list">
+            <li><span>01</span> Industrial automation & PLC</li>
+            <li><span>02</span> Instrumentation & IIoT data systems</li>
+            <li><span>03</span> Mechanical design & manufacturing</li>
+            <li><span>04</span> Robotics & mechatronics</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-muted" aria-labelledby="summary-heading">
+      <div class="container narrow">
+        <p class="eyebrow">PROFILE</p>
+        <h2 id="summary-heading">Engineering across physical and digital systems.</h2>
+        <p class="lead">
+          My background began in mechanical drafting and manufacturing-oriented engineering,
+          then expanded through industrial instrumentation, data acquisition, and monitoring.
+          I am now developing deeper capability in PLC automation and robotics while keeping
+          mechanical engineering as the physical foundation of my work.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">EXPERIENCE</p>
+            <h2>Selected experience</h2>
+          </div>
+          <p>Real work first. Projects support the story rather than replace it.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>Industrial Internship</span>
+              <span>PT Timah Industri</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Industrial Monitoring & Data Acquisition</h3>
+              <p>
+                Developed a real-time and historical monitoring workflow for industrial process data,
+                working with Modbus/RS-485 acquisition, MQTT communication, SQL storage, and dashboard visualization.
+              </p>
+              <div class="tags">
+                <span>Modbus</span><span>MQTT</span><span>MySQL</span><span>Node-RED</span><span>Instrumentation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>Professional Experience</span>
+              <span>CAD Drafter</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Mechanical Drafting & Manufacturing Documentation</h3>
+              <p>
+                Produced mechanical models and technical drawings for manufacturing-oriented work,
+                including assemblies, components, fabrication details, and design documentation.
+              </p>
+              <div class="tags">
+                <span>CAD</span><span>Technical Drawing</span><span>Manufacturing</span><span>Assemblies</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>Research</span>
+              <span>Mechanical Engineering</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Micro-Milling of CP-Titanium Implant Geometry</h3>
+              <p>
+                Investigated the effect of machining parameters on burr formation and dimensional accuracy,
+                combining CAD/CAM, CNC machining, metrology, image analysis, and experimental data interpretation.
+              </p>
+              <div class="tags">
+                <span>Micro-Milling</span><span>CP-Ti</span><span>Metrology</span><span>CAD/CAM</span><span>Research</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-dark">
+      <div class="container">
+        <div class="section-heading section-heading-light">
+          <div>
+            <p class="eyebrow">PROJECTS</p>
+            <h2>Selected engineering work</h2>
+          </div>
+          <p>Each project is presented as an engineering case study: problem, decisions, implementation, and validation.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Project filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="industrial">Industrial Systems</button>
+          <button class="filter" data-filter="mechanical">Mechanical</button>
+          <button class="filter" data-filter="research">Research</button>
+          <button class="filter" data-filter="development">In Development</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="industrial">
+            <a class="project-link" href="#">
+              <div class="project-visual visual-iot"><span>IIoT / SQL</span></div>
+              <div class="project-content">
+                <div class="project-topline"><span>Industrial Systems</span><span>Completed</span></div>
+                <h3>PT Timah Industrial Monitoring</h3>
+                <p>Real-time process monitoring from industrial measurement to MQTT, SQL history, and dashboard visualization.</p>
+                <div class="tags"><span>MQTT</span><span>MySQL</span><span>Modbus</span><span>Node-RED</span></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="research mechanical">
+            <a class="project-link" href="#">
+              <div class="project-visual visual-titanium"><span>MANUFACTURING RESEARCH</span></div>
+              <div class="project-content">
+                <div class="project-topline"><span>Research · Manufacturing</span><span>Completed</span></div>
+                <h3>CP-Titanium Micro-Milling</h3>
+                <p>Experimental study of burr height and dimensional accuracy in micro-machining of a titanium implant geometry.</p>
+                <div class="tags"><span>CAD/CAM</span><span>CNC</span><span>Metrology</span><span>ImageJ</span></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="mechanical">
+            <a class="project-link" href="#">
+              <div class="project-visual visual-conveyor"><span>MECHANICAL DESIGN</span></div>
+              <div class="project-content">
+                <div class="project-topline"><span>Mechanical Design</span><span>Completed</span></div>
+                <h3>Modular Roller Conveyor</h3>
+                <p>Assembly modeling and production documentation for straight, curved, roller, frame, and connection systems.</p>
+                <div class="tags"><span>Inventor</span><span>Assemblies</span><span>BOM</span><span>Drafting</span></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="industrial development">
+            <a class="project-link" href="#">
+              <div class="project-visual visual-workshop"><span>CONDITION MONITORING</span></div>
+              <div class="project-content">
+                <div class="project-topline"><span>IIoT · Data</span><span>In Development</span></div>
+                <h3>Smart Workshop Monitoring</h3>
+                <p>Low-cost ESP32 monitoring platform with MQTT transport, SQL historian, event logging, and automated analysis.</p>
+                <div class="tags"><span>ESP32</span><span>SQL</span><span>MQTT</span><span>Dashboard</span></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="industrial development">
+            <a class="project-link" href="#">
+              <div class="project-visual visual-plc"><span>PLC / PROCESS CONTROL</span></div>
+              <div class="project-content">
+                <div class="project-topline"><span>Automation</span><span>In Development</span></div>
+                <h3>PLC Process Automation</h3>
+                <p>Process simulation focused on PLC sequencing, interlocks, alarms, HMI, fault handling, and commissioning logic.</p>
+                <div class="tags"><span>TIA Portal</span><span>Factory I/O</span><span>PLC</span><span>HMI</span></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card" data-category="development mechanical">
+            <a class="project-link" href="#">
+              <div class="project-visual visual-robot"><span>MECHATRONICS / ROS2</span></div>
+              <div class="project-content">
+                <div class="project-topline"><span>Robotics</span><span>Planned</span></div>
+                <h3>Robotic Arm Platform</h3>
+                <p>Long-form mechatronics project integrating mechanical design, embedded control, ROS2, and motion planning.</p>
+                <div class="tags"><span>ROS2</span><span>ESP32</span><span>3D Printing</span><span>Robotics</span></div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">ABOUT</p>
+          <h2>Mechanical foundation. Systems mindset.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            I am interested in engineering roles where physical equipment, instrumentation, control,
+            and data intersect. My mechanical background gives me the machine-side perspective; my current
+            work in automation and industrial data is extending that foundation toward integrated systems.
+          </p>
+          <p>
+            I am particularly interested in industrial automation, field engineering, oil & gas,
+            manufacturing systems, and eventually robotics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">CONTACT</p>
+          <h2>Let’s talk engineering.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:your-email@example.com">your-email@example.com</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Amirul Hakim</span>
+      <span>Built with HTML, CSS & a little JavaScript.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html>
