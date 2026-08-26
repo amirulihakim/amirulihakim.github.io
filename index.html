@@ -11,12 +11,15 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Amirul Hakim home">AH</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav id="primary-nav" class="nav" aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -150,7 +153,7 @@
 
         <div class="project-grid">
           <article class="project-card" data-category="industrial">
-            <a class="project-link" href="#">
+            <a class="project-link" href="projects/pt-timah-industrial-monitoring.html">
               <div class="project-visual visual-iot"><span>IIoT / SQL</span></div>
               <div class="project-content">
                 <div class="project-topline"><span>Industrial Systems</span><span>Completed</span></div>
@@ -162,7 +165,7 @@
           </article>
 
           <article class="project-card" data-category="research mechanical">
-            <a class="project-link" href="#">
+            <a class="project-link" href="projects/cp-titanium-micro-milling.html">
               <div class="project-visual visual-titanium"><span>MANUFACTURING RESEARCH</span></div>
               <div class="project-content">
                 <div class="project-topline"><span>Research · Manufacturing</span><span>Completed</span></div>
@@ -174,7 +177,7 @@
           </article>
 
           <article class="project-card" data-category="mechanical">
-            <a class="project-link" href="#">
+            <a class="project-link" href="projects/modular-roller-conveyor.html">
               <div class="project-visual visual-conveyor"><span>MECHANICAL DESIGN</span></div>
               <div class="project-content">
                 <div class="project-topline"><span>Mechanical Design</span><span>Completed</span></div>
@@ -186,7 +189,7 @@
           </article>
 
           <article class="project-card" data-category="industrial development">
-            <a class="project-link" href="#">
+            <a class="project-link" href="projects/smart-workshop-monitoring.html">
               <div class="project-visual visual-workshop"><span>CONDITION MONITORING</span></div>
               <div class="project-content">
                 <div class="project-topline"><span>IIoT · Data</span><span>In Development</span></div>
@@ -198,7 +201,7 @@
           </article>
 
           <article class="project-card" data-category="industrial development">
-            <a class="project-link" href="#">
+            <a class="project-link" href="projects/plc-process-automation.html">
               <div class="project-visual visual-plc"><span>PLC / PROCESS CONTROL</span></div>
               <div class="project-content">
                 <div class="project-topline"><span>Automation</span><span>In Development</span></div>
@@ -210,7 +213,7 @@
           </article>
 
           <article class="project-card" data-category="development mechanical">
-            <a class="project-link" href="#">
+            <a class="project-link" href="projects/robotic-arm-platform.html">
               <div class="project-visual visual-robot"><span>MECHATRONICS / ROS2</span></div>
               <div class="project-content">
                 <div class="project-topline"><span>Robotics</span><span>Planned</span></div>
@@ -224,26 +227,6 @@
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">ABOUT</p>
-          <h2>Mechanical foundation. Systems mindset.</h2>
-        </div>
-        <div class="about-copy">
-          <p>
-            I am interested in engineering roles where physical equipment, instrumentation, control,
-            and data intersect. My mechanical background gives me the machine-side perspective; my current
-            work in automation and industrial data is extending that foundation toward integrated systems.
-          </p>
-          <p>
-            I am particularly interested in industrial automation, field engineering, oil & gas,
-            manufacturing systems, and eventually robotics.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <section id="contact" class="section contact-section">
       <div class="container contact-grid">
         <div>
@@ -251,9 +234,34 @@
           <h2>Let’s talk engineering.</h2>
         </div>
         <div class="contact-links">
-          <a href="mailto:your-email@example.com">your-email@example.com</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:amirulihakim@outlook.com">
+            <span class="contact-icon contact-icon-outlook" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M13.6 4.2h6.9c.8 0 1.5.7 1.5 1.5v12.6c0 .8-.7 1.5-1.5 1.5h-6.9V4.2Z" />
+                <path d="M13.6 6.8h7.2v10.4h-7.2V6.8Z" opacity=".22" />
+                <path d="m14 8.1 3.8 3 3.8-3v1.8l-3.8 2.9-3.8-2.9V8.1Z" />
+                <path d="M2 6.5 13.6 4v16L2 17.5v-11Z" />
+                <path d="M4.7 12c0-2.3 1.3-3.9 3.2-3.9s3.1 1.5 3.1 3.8c0 2.4-1.3 4-3.2 4-1.8 0-3.1-1.5-3.1-3.9Zm1.7 0c0 1.5.6 2.4 1.5 2.4s1.5-.9 1.5-2.4-.6-2.4-1.5-2.4-1.5.9-1.5 2.4Z" fill="currentColor" />
+              </svg>
+            </span>
+            amirulihakim@outlook.com
+          </a>
+          <a href="https://www.linkedin.com/in/amirulihakim/" target="_blank" rel="noreferrer">
+            <span class="contact-icon contact-icon-linkedin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z" />
+              </svg>
+            </span>
+            LinkedIn
+          </a>
+          <a href="https://github.com/amirulihakim" target="_blank" rel="noreferrer">
+            <span class="contact-icon contact-icon-github" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M12 .3a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.83.57A12 12 0 0 0 12 .3Z" />
+              </svg>
+            </span>
+            GitHub
+          </a>
         </div>
       </div>
     </section>
