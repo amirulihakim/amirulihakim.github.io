@@ -450,9 +450,10 @@ h3 { font-size: 1.45rem; }
 .footer-inner {
   min-height: 92px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 24px;
+  text-align: center;
   color: var(--dark-muted);
   font-size: 0.84rem;
 }
@@ -629,5 +630,5 @@ h3 { font-size: 1.45rem; }
     object-fit: cover;
     object-position: center;
   }
-  .footer-inner { flex-direction: column; align-items: flex-start; justify-content: center; padding: 22px 0; }
+  .footer-inner { flex-direction: column; align-items: center; justify-content: center; padding: 22px 0; }
 }
