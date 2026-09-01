@@ -3,96 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="PT Timah Industrial Monitoring case study by Amirul Hakim." />
-  <title>PT Timah Industrial Monitoring - Amirul Hakim</title>
+  <meta name="description" content="Industrial Flowmeter Monitoring System internship case study by Amirul Hakim." />
+  <title>Industrial Flowmeter Monitoring System - Amirul Hakim</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html#home" aria-label="Amirul Hakim home">AH</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
-        <a href="../index.html#home">Home</a>
-        <a href="../index.html#experience">Experience</a>
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body class="timah-page">
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="brand" href="../index.html#home" aria-label="Amirul Hakim home">AH</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+    <nav id="primary-nav" class="nav" aria-label="Primary navigation"><a href="../index.html#home">Home</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></nav>
+  </div></header>
 
   <main>
-    <section class="project-hero">
-      <div class="container">
-        <a class="back-link" href="../index.html#projects">Back to projects</a>
-        <div class="project-hero-grid">
-          <div>
-            <p class="project-kicker">Industrial Systems / Completed</p>
-            <h1 class="project-title">PT Timah Industrial Monitoring</h1>
-            <p class="project-summary">A real-time and historical process monitoring workflow that connects industrial measurement, Modbus/RS-485 acquisition, MQTT transport, SQL storage, and dashboard visualization.</p>
-          </div>
-          <dl class="project-facts">
-            <div><dt>Role</dt><dd>Industrial internship</dd></div>
-            <div><dt>Focus</dt><dd>Data acquisition</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Tools</dt><dd>Modbus, MQTT, MySQL, Node-RED</dd></div>
-          </dl>
+    <section class="timah-hero"><div class="container">
+      <a class="timah-back" href="../index.html#projects">&larr; Back to projects</a>
+      <div class="timah-hero-grid">
+        <div class="timah-hero-copy">
+          <p class="timah-eyebrow">PT Timah Industri &middot; Internship Project</p>
+          <h1>Industrial Flowmeter<br />Monitoring System</h1>
+          <p class="timah-lead">Centralized monitoring of industrial flowmeter measurements for improved visibility of operational data and historical trends.</p>
+          <div class="timah-actions"><a class="button timah-button-primary" href="#live-demo" aria-disabled="true" title="Deployment URL pending">Launch Live Demo <span aria-hidden="true">&nearr;</span></a><a class="button timah-button-ghost" href="#project-overview">Explore Project <span aria-hidden="true">&darr;</span></a></div>
+        </div>
+        <div class="timah-system-card" aria-label="System overview">
+          <div class="timah-system-head"><span>System overview</span><span class="timah-status-dot">Internship</span></div>
+          <div class="timah-signal"><span>Field instrument</span><i></i><span>Web dashboard</span></div>
+          <div class="timah-mini-grid"><span>Mechanical Engineering Intern</span><span>Maintenance Department</span><span>Industrial Instrumentation &amp; Monitoring</span><span>PT Timah Industri</span></div>
         </div>
       </div>
+    </div></section>
+
+    <section class="timah-tech" aria-label="Project technologies"><div class="container timah-tech-grid">
+      <div><b>32</b><span>ESP32</span></div><div><b>RS</b><span>Modbus RS-485</span></div><div><b>MQ</b><span>MQTT</span></div><div><b>SQL</b><span>MySQL</span></div><div><b>NR</b><span>Node-RED</span></div><div><b>JS</b><span>JavaScript</span></div>
+    </div></section>
+
+    <section id="project-overview" class="timah-section container timah-split">
+      <article><p class="timah-section-label">The challenge</p><h2>From isolated readings to shared visibility.</h2><p>Flowmeter measurements were available at individual instruments and control-panel locations, limiting convenient centralized observation and historical analysis. The project explored a data-acquisition and monitoring architecture capable of bringing these measurements into a unified digital interface.</p></article>
+      <article class="timah-role-card"><p class="timah-section-label">My role &amp; contribution</p><ul class="timah-check-list"><li>Studied available flowmeter parameters and communication interfaces</li><li>Worked with Modbus RTU over RS-485 for communication and testing</li><li>Developed an ESP32-based acquisition concept</li><li>Built the MQTT/network data flow</li><li>Structured timestamped sensor storage with MySQL</li><li>Developed real-time and historical web visualization</li><li>Integrated multiple monitored locations into one interface</li><li>Tested and documented the monitoring concept</li></ul></article>
     </section>
 
-    <section class="project-band">
-      <div class="container">
-        <div class="project-visual visual-iot"><span>IIoT / SQL / DASHBOARD</span></div>
+    <section class="timah-section timah-section-soft"><div class="container">
+      <div class="timah-section-heading"><div><p class="timah-section-label">System architecture</p><h2>Measurement to decision support.</h2></div><p>A connected internship implementation spanning field communication, acquisition, transport, storage, and browser visualization.</p></div>
+      <div class="timah-architecture" role="img" aria-label="Flowmeter through Modbus RS-485, ESP32, MQTT, Node-RED, MySQL, and web dashboard">
+        <div class="timah-arch-node"><b>01</b><strong>Flowmeter</strong><span>Instrument</span></div><i></i><div class="timah-arch-node"><b>02</b><strong>Modbus</strong><span>RS-485</span></div><i></i><div class="timah-arch-node"><b>03</b><strong>ESP32</strong><span>Acquisition</span></div><i></i><div class="timah-arch-node"><b>04</b><strong>MQTT</strong><span>Network</span></div><i></i><div class="timah-arch-node"><b>05</b><strong>Node-RED</strong><span>Processing</span></div><i></i><div class="timah-arch-node"><b>06</b><strong>MySQL</strong><span>Database</span></div><i></i><div class="timah-arch-node"><b>07</b><strong>Dashboard</strong><span>Live + history</span></div>
       </div>
+    </div></section>
+
+    <section class="timah-section container"><div class="timah-parameter-layout">
+      <div><p class="timah-section-label">Monitored parameters</p><h2>One view of the process.</h2><p>The interface grouped core measurements and totalizers into a consistent monitoring view.</p></div>
+      <div class="timah-parameter-grid"><span>Flow Rate</span><span>Flow Velocity</span><span>Flow Percentage</span><span>Instant Heat</span><span>Inlet Temperature</span><span>Outlet Temperature</span><span>Positive Total</span><span>Negative Total</span><span>Heating Total</span><span>Cooling Total</span></div>
+    </div></section>
+
+    <section class="timah-section timah-dashboard-section"><div class="container">
+      <div class="timah-section-heading timah-heading-light"><div><p class="timah-section-label">Dashboard implementation</p><h2>Real-time status and historical review.</h2></div><p>The web interface consolidated multiple flowmeter parameters into a centralized monitoring view and provided both real-time visualization and selectable historical ranges.</p></div>
+      <div class="timah-evidence-grid">
+        <div class="timah-asset-slot timah-asset-wide" data-required-asset="../assets/projects/timah/dashboard-original-main.webp"><span>Original internship dashboard</span><strong>Screenshot asset pending</strong><code>dashboard-original-main.webp</code></div>
+        <div class="timah-asset-slot" data-required-asset="../assets/projects/timah/dashboard-original-history.webp"><span>Historical trends</span><strong>Screenshot asset pending</strong><code>dashboard-original-history.webp</code></div>
+        <div class="timah-asset-slot" data-required-asset="../assets/projects/timah/dashboard-original-data.webp"><span>Data records</span><strong>Screenshot asset pending</strong><code>dashboard-original-data.webp</code></div>
+      </div>
+      <p class="timah-evidence-note">Original monitoring dashboard developed during my internship at PT Timah Industri. Evidence placeholders remain intentionally visible until authentic screenshots are supplied.</p>
+    </div></section>
+
+    <section class="timah-section container timah-outcome"><p class="timah-section-label">Project outcome &amp; experience</p><div><h2>An end-to-end industrial monitoring experience.</h2><p>The project produced a functional prototype for centralized acquisition, storage, and visualization of industrial flowmeter data. It demonstrated a complete data path from industrial instrumentation and digital communication to database storage and browser-based monitoring.</p><p>The work provided practical experience connecting mechanical and industrial instrumentation with embedded systems, Modbus communication, MQTT, databases, and web-based engineering interfaces.</p></div></section>
+
+    <section id="live-demo" class="timah-section container">
+      <div class="timah-demo-card"><div class="timah-demo-copy"><p class="timah-section-label">Live demo &middot; synthetic data</p><h2>Explore the Live Monitoring Demo</h2><p>An interactive demonstration of the monitoring concept is available using synthetic telemetry generated by a physical ESP32.</p><a class="button timah-button-primary" href="#live-demo" aria-disabled="true" title="Deployment URL pending">Launch Live Demo <span aria-hidden="true">&nearr;</span></a><small>Live demo deployment URL pending.</small></div><div class="timah-asset-slot timah-demo-slot" data-required-asset="../assets/projects/timah/dashboard-live-demo.webp"><span>Portfolio live dashboard</span><strong>Preview asset pending</strong><code>dashboard-live-demo.webp</code></div></div>
+      <p class="timah-disclaimer"><strong>Portfolio disclosure:</strong> The live demo uses synthetic telemetry and is not connected to PT Timah Industri infrastructure.</p>
     </section>
 
-    <section class="container case-study">
-      <h2>Problem</h2>
-      <div class="case-study-content">
-        <p>Industrial process data is most useful when operators can see live values and review historical behavior. The project focused on building a monitoring flow that could bridge field-side instrumentation with a data system suitable for dashboards and later analysis.</p>
-      </div>
-    </section>
-
-    <section class="container case-study">
-      <h2>Approach</h2>
-      <div class="case-study-content">
-        <ul>
-          <li>Acquired process values through Modbus over RS-485.</li>
-          <li>Transported readings through MQTT for lightweight industrial messaging.</li>
-          <li>Stored historical records in MySQL for traceability and analysis.</li>
-          <li>Used Node-RED to coordinate data movement and dashboard presentation.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="container case-study">
-      <h2>Outcome</h2>
-      <div class="case-study-content">
-        <p>The project became a complete IIoT case study: field measurement, communication, database history, and visualization. It is one of the strongest portfolio examples because it shows both industrial context and digital systems thinking.</p>
-        <div class="tags"><span>Modbus</span><span>RS-485</span><span>MQTT</span><span>MySQL</span><span>Node-RED</span></div>
-      </div>
-    </section>
-
-    <section class="project-band">
-      <div class="container next-projects">
-        <a href="../index.html#projects">All projects</a>
-        <a href="cp-titanium-micro-milling.html">Next: CP-Titanium Micro-Milling</a>
-      </div>
-    </section>
+    <section class="project-band"><div class="container next-projects"><a href="../index.html#projects">All projects</a><a href="cp-titanium-micro-milling.html">Next: CP-Titanium Micro-Milling</a></div></section>
   </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>&copy; <span id="year"></span> Amirul Hakim</span>
-      <span>Engineering Portfolio</span>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container footer-inner"><span>&copy; <span id="year"></span> Amirul Hakim</span><span>Engineering Portfolio</span></div></footer>
   <script src="../script.js"></script>
 </body>
 </html>
