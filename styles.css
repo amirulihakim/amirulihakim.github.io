@@ -384,7 +384,9 @@ h3 { font-size: 1.45rem; }
   color: rgba(255,255,255,.86);
 }
 .project-visual > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
-.project-visual-timah > img { object-position: center 72%; }
+.project-visual-timah > img { z-index: 0; object-position: center 72%; }
+.project-visual-timah::after { z-index: 1; }
+.project-visual-timah span { position: relative; z-index: 2; }
 .visual-iot { background: radial-gradient(circle at 25% 25%, #4d8dff, transparent 27%), linear-gradient(135deg,#1a2131,#31476f); }
 .visual-titanium { background: radial-gradient(circle at 70% 25%, #c5ccd5, transparent 20%), linear-gradient(135deg,#50555d,#1c1e21); }
 .visual-conveyor { background: linear-gradient(145deg,#40312b,#8f725f); }
