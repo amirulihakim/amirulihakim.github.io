@@ -272,10 +272,17 @@ function translateTextNodes(lang) {
   const from = lang === 'id' ? 0 : 1;
   const to = lang === 'id' ? 1 : 0;
   const map = new Map(textPairs.map(pair => [normalizeText(pair[from]), pair[to]]));
+  const stableMap = new Map(textPairs.map(pair => [normalizeText(pair[0]), pair[lang === 'id' ? 1 : 0]]));
   const selector = 'a, button, h1, h2, h3, p, span, strong, figcaption, small, dt, dd, li';
+
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const value = stableMap.get(normalizeText(element.dataset.i18n));
+    if (value) element.textContent = value;
+  });
 
   document.querySelectorAll(selector).forEach(element => {
     if (element.closest('.lang-switch')) return;
+    if (element.hasAttribute('data-i18n')) return;
     if (element.children.length > 0) return;
 
     const key = normalizeText(element.textContent);
