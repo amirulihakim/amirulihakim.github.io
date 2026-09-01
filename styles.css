@@ -702,9 +702,9 @@ h3 { font-size: 1.45rem; }
 .timah-dashboard-section h2, .timah-heading-light h2 { color: #fff; }
 .timah-dashboard-section p { color: #aabbd0; }
 .timah-heading-light .timah-section-label { color: #63c5ed; }
-.timah-evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.timah-evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
 .timah-dashboard-media { border-color: #294765; background: #0d233f; box-shadow: 0 20px 45px rgba(0,0,0,.22); }
-.timah-dashboard-media img { aspect-ratio: auto; object-fit: contain; background: #fff; }
+.timah-dashboard-media img { aspect-ratio: 16 / 9; object-fit: contain; background: #fff; }
 .timah-dashboard-media figcaption { display: grid; gap: 3px; color: #94aac0; }
 .timah-dashboard-media figcaption strong { color: #fff; font-size: .85rem; }
 .timah-dashboard-media figcaption span { display: block; }
