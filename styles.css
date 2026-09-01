@@ -635,8 +635,8 @@ h3 { font-size: 1.45rem; }
 
 /* PT Timah case study */
 .timah-page { --timah-navy: #071a38; --timah-blue: #1268c4; --timah-cyan: #45b7e8; background: #f5f7fa; }
-.timah-hero { position: relative; overflow: hidden; padding: 42px 0 88px; color: #fff; background: radial-gradient(circle at 78% 32%, rgba(42,126,201,.32), transparent 28%), linear-gradient(135deg, #06152f 0%, #0b2d56 64%, #06172e 100%); }
-.timah-hero::before { content: ""; position: absolute; inset: 0; opacity: .15; background-image: linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to right, transparent, #000); }
+.timah-hero { position: relative; overflow: hidden; padding: 42px 0 88px; color: #fff; background-image: linear-gradient(90deg, rgba(3,15,34,.97) 0%, rgba(5,24,50,.88) 48%, rgba(6,24,47,.68) 100%), url("assets/projects/timah/hero-team.jpeg"); background-position: center, center 42%; background-size: cover; background-repeat: no-repeat; }
+.timah-hero::before { content: ""; position: absolute; inset: 0; opacity: .1; background-image: linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to right, #000, transparent); }
 .timah-hero .container { position: relative; }
 .timah-back { display: inline-block; margin-bottom: 56px; color: #bbcee3; text-decoration: none; font-weight: 700; }
 .timah-back:hover { color: #fff; }
@@ -670,6 +670,11 @@ h3 { font-size: 1.45rem; }
 .timah-section p { color: #5f6875; }
 .timah-split { display: grid; grid-template-columns: .88fr 1.12fr; gap: 84px; align-items: center; }
 .timah-split > article > p:last-child { max-width: 540px; margin-bottom: 0; font-size: 1.06rem; }
+.timah-media-card { margin: 0; overflow: hidden; border: 1px solid #d8e1eb; border-radius: 14px; background: #fff; box-shadow: 0 16px 38px rgba(7,26,56,.1); }
+.timah-media-card img, .timah-media-card video { display: block; width: 100%; height: auto; }
+.timah-media-card figcaption { padding: 14px 16px; color: #667589; font-size: .78rem; line-height: 1.45; }
+.timah-hardware-media { margin-top: 30px; }
+.timah-hardware-media img { aspect-ratio: 4000 / 2252; object-fit: contain; background: #e9eef3; }
 .timah-role-card { padding: 36px; background: #eaf2fa; border: 1px solid #d8e6f3; border-radius: 16px; }
 .timah-check-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px 24px; margin: 0; padding: 0; list-style: none; }
 .timah-check-list li { position: relative; padding-left: 22px; color: #314056; font-size: .9rem; }
@@ -694,7 +699,12 @@ h3 { font-size: 1.45rem; }
 .timah-dashboard-section h2, .timah-heading-light h2 { color: #fff; }
 .timah-dashboard-section p { color: #aabbd0; }
 .timah-heading-light .timah-section-label { color: #63c5ed; }
-.timah-evidence-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+.timah-evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.timah-dashboard-media { border-color: #294765; background: #0d233f; box-shadow: 0 20px 45px rgba(0,0,0,.22); }
+.timah-dashboard-media img { aspect-ratio: auto; object-fit: contain; background: #fff; }
+.timah-dashboard-media figcaption { display: grid; gap: 3px; color: #94aac0; }
+.timah-dashboard-media figcaption strong { color: #fff; font-size: .85rem; }
+.timah-dashboard-media figcaption span { display: block; }
 .timah-asset-slot { display: flex; min-height: 220px; flex-direction: column; align-items: center; justify-content: center; padding: 28px; text-align: center; border: 1px dashed #57708c; border-radius: 12px; background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.025)); }
 .timah-asset-wide { grid-row: span 2; min-height: 458px; }
 .timah-asset-slot span { color: #88a9c8; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
@@ -707,6 +717,9 @@ h3 { font-size: 1.45rem; }
 .timah-demo-card { display: grid; grid-template-columns: .82fr 1.18fr; gap: 54px; align-items: center; padding: 48px; overflow: hidden; border: 1px solid #cbe0f1; border-radius: 18px; background: linear-gradient(135deg, #eef8fe, #dceef9); }
 .timah-demo-copy .timah-button-primary { margin-top: 14px; }
 .timah-demo-copy small { display: block; margin-top: 10px; color: #65768a; }
+.timah-video-media { border-color: #9cbcd4; background: #071a38; box-shadow: 0 20px 44px rgba(7,26,56,.18); }
+.timah-video-media video { max-height: 560px; object-fit: contain; background: #061326; }
+.timah-video-media figcaption { color: #c1d2e2; }
 .timah-demo-slot { min-height: 310px; border-color: #8fb7d4; background: rgba(255,255,255,.55); }
 .timah-demo-slot strong { color: #183556; }
 .timah-disclaimer { margin: 20px 12px 0; font-size: .8rem; }
@@ -723,7 +736,7 @@ h3 { font-size: 1.45rem; }
 }
 
 @media (max-width: 700px) {
-  .timah-hero { padding: 34px 0 68px; }
+  .timah-hero { padding: 34px 0 68px; background-image: linear-gradient(rgba(3,15,34,.9), rgba(5,24,50,.82)), url("assets/projects/timah/hero-team.jpeg"); background-position: center, 58% center; }
   .timah-back { margin-bottom: 38px; }
   .timah-hero h1 { font-size: clamp(2.7rem, 14vw, 4.4rem); }
   .timah-tech-grid { grid-template-columns: repeat(2, 1fr); }
