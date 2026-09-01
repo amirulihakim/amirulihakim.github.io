@@ -67,6 +67,8 @@ const textPairs = [
   ['Planned', 'Direncanakan'],
   ['PT Timah Industrial Monitoring', 'Monitoring Industri PT Timah'],
   ['Real-time process monitoring from industrial measurement to MQTT, SQL history, and dashboard visualization.', 'Monitoring proses real-time dari pengukuran industri ke MQTT, histori SQL, dan visualisasi dashboard.'],
+  ['Industrial Flowmeter Monitoring System', 'Sistem Monitoring Flowmeter Industri'],
+  ['Centralized industrial instrumentation monitoring developed during my PT Timah Industri internship, integrating Modbus RS-485, ESP32, MQTT, database storage, and web visualization.', 'Monitoring instrumentasi industri terpusat yang dikembangkan selama magang saya di PT Timah Industri, mengintegrasikan Modbus RS-485, ESP32, MQTT, penyimpanan database, dan visualisasi web.'],
   ['Research · Manufacturing', 'Riset · Manufaktur'],
   ['Experimental study of burr height and dimensional accuracy in micro-machining of a titanium implant geometry.', 'Studi eksperimen tinggi burr dan akurasi dimensi pada micro-machining geometri implan titanium.'],
   ['Mechanical Design', 'Desain Mekanik'],
