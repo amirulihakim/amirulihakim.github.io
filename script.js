@@ -241,11 +241,108 @@ const focusItems = {
 const titles = {
   en: {
     '/index.html': 'Amirul Hakim — Engineering Portfolio',
-    '/': 'Amirul Hakim — Engineering Portfolio'
+    '/': 'Amirul Hakim — Engineering Portfolio',
+    '/pt-timah-industrial-monitoring.html': 'Industrial Flowmeter Monitoring System - Amirul Hakim'
   },
   id: {
     '/index.html': 'Amirul Hakim — Portofolio Engineering',
-    '/': 'Amirul Hakim — Portofolio Engineering'
+    '/': 'Amirul Hakim — Portofolio Engineering',
+    '/pt-timah-industrial-monitoring.html': 'Sistem Pemantauan Flowmeter Industri - Amirul Hakim'
+  }
+};
+
+const timahProjectTranslations = {
+  en: {
+    'nav.back': '← Back to projects', 'hero.context': 'PT Timah Industri · Maintenance Department · Internship Project',
+    'hero.title1': 'Centralized Data Acquisition', 'hero.title2': 'and Monitoring System',
+    'hero.abstract': 'Centralized acquisition and browser-based monitoring of distributed industrial flowmeter measurements for real-time visibility and historical review.',
+    'overview.label': 'System overview', 'overview.context': 'Internship project', 'overview.field': 'Field Instruments',
+    'overview.fieldDesc': 'Local industrial sensors and process measurements.', 'overview.database': 'Centralized Database',
+    'overview.databaseDesc': 'Consolidated storage of timestamped monitoring data.', 'overview.dashboard': 'Monitoring Dashboard',
+    'overview.dashboardDesc': 'Browser-based realtime and historical visualization.', 'project.label': 'Project Overview',
+    'project.heading': 'From distributed readings to shared visibility.', 'project.background': 'Background',
+    'project.backgroundDesc': 'Flowmeter readings were available locally from instruments installed at several monitored points.',
+    'project.problem': 'Problem', 'project.problemDesc': 'Checking distributed measurements individually limited convenient centralized monitoring and historical review.',
+    'project.result': 'Result', 'project.resultDesc': 'The project integrated these measurements into a centralized system for acquisition, storage, and browser-based realtime and historical monitoring.',
+    'project.hardwareCaption': 'Installed flowmeter displays at the monitored locations.',
+    'architecture.label': 'System architecture', 'architecture.heading': 'Field acquisition to web monitoring.',
+    'architecture.sensors': 'Sensors', 'architecture.sensorsDesc': 'Process measurements from field instrumentation.',
+    'architecture.modbusDesc': 'Industrial serial communication.', 'architecture.esp32Desc': 'Reads, structures, and forwards measurements.',
+    'architecture.mqttDesc': 'Publish/subscribe telemetry transport.', 'architecture.network': 'Network / Internet',
+    'architecture.networkDesc': 'Carries monitoring data between systems.', 'architecture.websocketDesc': 'Realtime browser-data delivery.',
+    'architecture.mysqlDesc': 'Timestamped historical measurement storage.', 'architecture.dashboard': 'Web Monitoring Dashboard',
+    'architecture.dashboardDesc': 'Realtime and historical monitoring interface.', 'measure.label': 'Measurements & Engineering Relationships',
+    'measure.heading': 'Monitored values and physical relationships.', 'measure.realtime': 'Real-Time Process Variables', 'measure.accumulated': 'Accumulated Values',
+    'param.flowRate': 'Flow Rate', 'param.flowRateDesc': 'Volumetric water flow through the monitored line.',
+    'param.flowVelocity': 'Flow Velocity', 'param.flowVelocityDesc': 'Average water velocity through the pipe.',
+    'param.flowPercentage': 'Flow Percentage', 'param.flowPercentageDesc': 'Current flow relative to rated capacity.',
+    'param.instantHeat': 'Instantaneous Heat', 'param.instantHeatDesc': 'Thermal-energy transfer rate based on flow and temperature difference.',
+    'param.inputTemperature': 'Input Temperature', 'param.inputTemperatureDesc': 'Water temperature entering the monitored circuit.',
+    'param.outputTemperature': 'Output Temperature', 'param.outputTemperatureDesc': 'Water temperature leaving the monitored circuit.',
+    'param.positiveFlow': 'Positive Flow', 'param.positiveFlowDesc': 'Cumulative forward flow volume.',
+    'param.negativeFlow': 'Negative Flow', 'param.negativeFlowDesc': 'Cumulative reverse flow volume.',
+    'param.heatingEnergy': 'Heating Energy', 'param.heatingEnergyDesc': 'Cumulative heating energy.',
+    'param.coolingEnergy': 'Cooling Energy', 'param.coolingEnergyDesc': 'Cumulative cooling energy.',
+    'formula.flow': 'Flow Relationship', 'formula.flowDesc': 'Flow velocity is related to volumetric flow and pipe cross-sectional area.',
+    'formula.thermal': 'Thermal Relationship', 'formula.thermalDesc': 'Thermal-energy transfer rate depends on water flow and the inlet–outlet temperature difference.',
+    'formula.validation': 'Measurement Validation',
+    'formula.validationDesc': 'At approximately 27 m³/h and ΔT ≈ 3.6°C, the calculated value is approximately 0.407 GJ/h, closely matching the observed flowmeter reading of 0.404 GJ/h.',
+    'docs.label': 'Technical documentation', 'docs.heading': 'System evidence.', 'docs.realtimeTitle': 'Original realtime monitoring dashboard',
+    'docs.realtimeCaption': 'Internship-era overview and monitoring interface.', 'docs.historyTitle': 'Original historical monitoring dashboard',
+    'docs.historyCaption': 'Internship-era record and reporting view.', 'docs.hardwareTitle': 'Physical flowmeter instrumentation',
+    'docs.hardwareCaption': 'Installed displays at the monitored utility locations.', 'docs.videoUnsupported': 'Your browser does not support embedded video.',
+    'docs.esp32Title': 'ESP32 acquisition demonstration', 'docs.esp32Caption': 'Hardware-side synthetic telemetry demonstration.',
+    'demo.label': 'Portfolio reconstruction', 'demo.heading': 'Interactive Dashboard Simulation',
+    'demo.description': 'A public portfolio reconstruction using physically consistent synthetic telemetry generated by an ESP32. It is not connected to PT Timah Industri infrastructure.',
+    'demo.cta': 'Launch Live Demo', 'demo.previewLabel': 'Live dashboard preview', 'demo.previewTitle': 'Preview unavailable',
+    'demo.previewText': 'The video could not be loaded.', 'nav.allProjects': 'All projects',
+    'nav.nextProject': 'Next: CP-Titanium Micro-Milling', 'footer.portfolio': 'Engineering Portfolio'
+  },
+  id: {
+    'nav.back': '← Kembali ke proyek', 'hero.context': 'PT Timah Industri · Departemen Maintenance · Proyek Magang',
+    'hero.title1': 'Sistem Akuisisi dan', 'hero.title2': 'Pemantauan Data Terpusat',
+    'hero.abstract': 'Akuisisi terpusat dan pemantauan berbasis peramban untuk pengukuran flowmeter industri yang tersebar, mendukung visibilitas waktu nyata dan peninjauan historis.',
+    'overview.label': 'Ikhtisar Sistem', 'overview.context': 'Proyek magang', 'overview.field': 'Instrumen Lapangan',
+    'overview.fieldDesc': 'Sensor industri lokal dan pengukuran proses.', 'overview.database': 'Basis Data Terpusat',
+    'overview.databaseDesc': 'Penyimpanan terintegrasi untuk data pemantauan bertanda waktu.', 'overview.dashboard': 'Dasbor Pemantauan',
+    'overview.dashboardDesc': 'Visualisasi waktu nyata dan historis berbasis peramban.', 'project.label': 'Ikhtisar Proyek',
+    'project.heading': 'Dari pembacaan tersebar menuju visibilitas bersama.', 'project.background': 'Latar Belakang',
+    'project.backgroundDesc': 'Pembacaan flowmeter tersedia secara lokal pada instrumen yang terpasang di beberapa titik pemantauan.',
+    'project.problem': 'Permasalahan', 'project.problemDesc': 'Pemeriksaan pengukuran yang tersebar secara terpisah membatasi kemudahan pemantauan terpusat dan peninjauan historis.',
+    'project.result': 'Hasil', 'project.resultDesc': 'Proyek ini mengintegrasikan pengukuran ke dalam sistem terpusat untuk akuisisi, penyimpanan, serta pemantauan waktu nyata dan historis berbasis peramban.',
+    'project.hardwareCaption': 'Tampilan flowmeter yang terpasang di lokasi pemantauan.',
+    'architecture.label': 'Arsitektur Sistem', 'architecture.heading': 'Dari akuisisi lapangan ke pemantauan web.',
+    'architecture.sensors': 'Sensor', 'architecture.sensorsDesc': 'Pengukuran proses dari instrumentasi lapangan.',
+    'architecture.modbusDesc': 'Komunikasi serial industri.', 'architecture.esp32Desc': 'Membaca, menyusun, dan meneruskan pengukuran.',
+    'architecture.mqttDesc': 'Transport telemetri berbasis publish/subscribe.', 'architecture.network': 'Jaringan / Internet',
+    'architecture.networkDesc': 'Membawa data pemantauan antarsistem.', 'architecture.websocketDesc': 'Pengiriman data waktu nyata ke peramban.',
+    'architecture.mysqlDesc': 'Penyimpanan historis pengukuran bertanda waktu.', 'architecture.dashboard': 'Dasbor Pemantauan Web',
+    'architecture.dashboardDesc': 'Antarmuka pemantauan waktu nyata dan historis.', 'measure.label': 'Pengukuran & Hubungan Rekayasa',
+    'measure.heading': 'Nilai Pemantauan dan Hubungan Fisik', 'measure.realtime': 'Variabel Proses Waktu Nyata', 'measure.accumulated': 'Nilai Akumulasi',
+    'param.flowRate': 'Laju Aliran', 'param.flowRateDesc': 'Laju aliran volumetrik air pada jalur yang dipantau.',
+    'param.flowVelocity': 'Kecepatan Aliran', 'param.flowVelocityDesc': 'Kecepatan rata-rata air di dalam pipa.',
+    'param.flowPercentage': 'Persentase Aliran', 'param.flowPercentageDesc': 'Aliran saat ini relatif terhadap kapasitas terukur.',
+    'param.instantHeat': 'Laju Perpindahan Panas', 'param.instantHeatDesc': 'Laju perpindahan energi termal berdasarkan aliran dan perbedaan temperatur.',
+    'param.inputTemperature': 'Temperatur Masuk', 'param.inputTemperatureDesc': 'Temperatur air yang memasuki sirkuit pemantauan.',
+    'param.outputTemperature': 'Temperatur Keluar', 'param.outputTemperatureDesc': 'Temperatur air yang meninggalkan sirkuit pemantauan.',
+    'param.positiveFlow': 'Akumulasi Aliran Positif', 'param.positiveFlowDesc': 'Volume kumulatif aliran maju.',
+    'param.negativeFlow': 'Akumulasi Aliran Negatif', 'param.negativeFlowDesc': 'Volume kumulatif aliran balik.',
+    'param.heatingEnergy': 'Energi Pemanasan', 'param.heatingEnergyDesc': 'Energi pemanasan kumulatif.',
+    'param.coolingEnergy': 'Energi Pendinginan', 'param.coolingEnergyDesc': 'Energi pendinginan kumulatif.',
+    'formula.flow': 'Hubungan Aliran', 'formula.flowDesc': 'Kecepatan aliran berhubungan dengan laju aliran volumetrik dan luas penampang pipa.',
+    'formula.thermal': 'Hubungan Termal', 'formula.thermalDesc': 'Laju perpindahan energi termal bergantung pada aliran air dan perbedaan temperatur masuk–keluar.',
+    'formula.validation': 'Validasi Pengukuran',
+    'formula.validationDesc': 'Pada sekitar 27 m³/h dan ΔT ≈ 3.6°C, nilai perhitungan sekitar 0.407 GJ/h, mendekati pembacaan flowmeter yang teramati sebesar 0.404 GJ/h.',
+    'docs.label': 'Dokumentasi Teknis', 'docs.heading': 'Bukti sistem.', 'docs.realtimeTitle': 'Dasbor pemantauan waktu nyata asli',
+    'docs.realtimeCaption': 'Ikhtisar dan antarmuka pemantauan pada masa magang.', 'docs.historyTitle': 'Dasbor pemantauan historis asli',
+    'docs.historyCaption': 'Tampilan rekaman dan pelaporan pada masa magang.', 'docs.hardwareTitle': 'Instrumentasi flowmeter fisik',
+    'docs.hardwareCaption': 'Tampilan terpasang di lokasi utilitas yang dipantau.', 'docs.videoUnsupported': 'Peramban Anda tidak mendukung video tersemat.',
+    'docs.esp32Title': 'Demonstrasi akuisisi ESP32', 'docs.esp32Caption': 'Demonstrasi telemetri sintetis pada sisi perangkat keras.',
+    'demo.label': 'Rekonstruksi portofolio', 'demo.heading': 'Simulasi Dasbor Interaktif',
+    'demo.description': 'Rekonstruksi portofolio publik menggunakan telemetri sintetis yang konsisten secara fisik dan dihasilkan oleh ESP32. Demo ini tidak terhubung ke infrastruktur PT Timah Industri.',
+    'demo.cta': 'Buka Demo Langsung', 'demo.previewLabel': 'Pratinjau dasbor langsung', 'demo.previewTitle': 'Pratinjau tidak tersedia',
+    'demo.previewText': 'Video tidak dapat dimuat.', 'nav.allProjects': 'Semua proyek',
+    'nav.nextProject': 'Berikutnya: Micro-Milling CP-Titanium', 'footer.portfolio': 'Portofolio Engineering'
   }
 };
 
@@ -276,7 +373,8 @@ function translateTextNodes(lang) {
   const selector = 'a, button, h1, h2, h3, p, span, strong, figcaption, small, dt, dd, li';
 
   document.querySelectorAll('[data-i18n]').forEach(element => {
-    const value = stableMap.get(normalizeText(element.dataset.i18n));
+    const value = timahProjectTranslations[lang]?.[element.dataset.i18n]
+      || stableMap.get(normalizeText(element.dataset.i18n));
     if (value) element.textContent = value;
   });
 
