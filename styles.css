@@ -387,6 +387,7 @@ h3 { font-size: 1.45rem; }
 .project-visual-timah > img { z-index: 0; object-position: center 72%; }
 .project-visual-timah::after { z-index: 1; }
 .project-visual-timah span { position: relative; z-index: 2; }
+.project-visual-wtp > img { object-fit: contain; object-position: center; background:#edf4fa; }
 .visual-iot { background: radial-gradient(circle at 25% 25%, #4d8dff, transparent 27%), linear-gradient(135deg,#1a2131,#31476f); }
 .visual-titanium { background: radial-gradient(circle at 70% 25%, #c5ccd5, transparent 20%), linear-gradient(135deg,#50555d,#1c1e21); }
 .visual-conveyor { background: linear-gradient(145deg,#40312b,#8f725f); }
