@@ -54,7 +54,7 @@ const textPairs = [
   ['Produced mechanical models and technical drawings for manufacturing-oriented work, including assemblies, components, fabrication details, and design documentation.', 'Membuat model mekanik dan gambar teknik untuk pekerjaan berorientasi manufaktur, termasuk assembly, komponen, detail fabrikasi, dan dokumentasi desain.'],
   ['Research', 'Riset'],
   ['Mechanical Engineering', 'Teknik Mesin'],
-  ['Micro-Milling of CP-Titanium Implant Geometry', 'Micro-Milling Geometri Implan CP-Titanium'],
+  ['Micro-Milling of CP Titanium Implant Geometry', 'Micro-Milling Geometri Implan CP Titanium'],
   ['Investigated the effect of machining parameters on burr formation and dimensional accuracy, combining CAD/CAM, CNC machining, metrology, image analysis, and experimental data interpretation.', 'Meneliti pengaruh parameter pemesinan terhadap pembentukan burr dan akurasi dimensi, dengan menggabungkan CAD/CAM, CNC machining, metrologi, analisis gambar, dan interpretasi data eksperimen.'],
   ['PROJECTS', 'PROYEK'],
   ['Selected engineering work', 'Karya engineering pilihan'],
@@ -65,11 +65,8 @@ const textPairs = [
   ['In Development', 'Dalam Pengembangan'],
   ['Completed', 'Selesai'],
   ['Planned', 'Direncanakan'],
-  ['PT Timah Industrial Monitoring', 'Monitoring Industri PT Timah'],
   ['Real-time process monitoring from industrial measurement to MQTT, SQL history, and dashboard visualization.', 'Monitoring proses real-time dari pengukuran industri ke MQTT, histori SQL, dan visualisasi dashboard.'],
-  ['Industrial Flowmeter Monitoring System', 'Sistem Monitoring Flowmeter Industri'],
-  ['Industrial Flowmeter', 'Sistem Monitoring'],
-  ['Monitoring System', 'Flowmeter Industri'],
+  ['Centralized Data Acquisition and Monitoring System', 'Sistem Akuisisi dan Pemantauan Data Terpusat'],
   ['Centralized industrial instrumentation monitoring developed during my PT Timah Industri internship, integrating Modbus RS-485, ESP32, MQTT, database storage, and web visualization.', 'Monitoring instrumentasi industri terpusat yang dikembangkan selama magang saya di PT Timah Industri, mengintegrasikan Modbus RS-485, ESP32, MQTT, penyimpanan database, dan visualisasi web.'],
   ['PT Timah Industri · Internship Project', 'PT Timah Industri · Proyek Magang'],
   ['Centralized monitoring of industrial flowmeter measurements for improved visibility of operational data and historical trends.', 'Sistem monitoring terpusat untuk mengintegrasikan pengukuran flowmeter industri serta mempermudah pemantauan data operasional dan tren historis.'],
@@ -135,7 +132,8 @@ const textPairs = [
   ['Portfolio disclosure:', 'Pernyataan portofolio:'],
   ['The live demo uses synthetic telemetry and is not connected to PT Timah Industri infrastructure.', 'Demo publik menggunakan telemetri sintetis dan tidak terhubung dengan infrastruktur PT Timah Industri.'],
   ['Research · Manufacturing', 'Riset · Manufaktur'],
-  ['Experimental study of burr height and dimensional accuracy in micro-machining of a titanium implant geometry.', 'Studi eksperimen tinggi burr dan akurasi dimensi pada micro-machining geometri implan titanium.'],
+  ['Feed-Rate Optimization in CP Titanium Micro-Milling', 'Optimasi Feed Rate pada Micro-Milling CP Titanium'],
+  ['Experimental study of dimensional accuracy, burr formation, cutting temperature, and chip characteristics in a CP Titanium I-Plate geometry.', 'Studi eksperimen akurasi dimensi, pembentukan burr, temperatur pemotongan, dan karakteristik geram pada geometri I-Plate CP Titanium.'],
   ['Mechanical Design', 'Desain Mekanik'],
   ['Modular Roller Conveyor', 'Roller Conveyor Modular'],
   ['Assembly modeling and production documentation for straight, curved, roller, frame, and connection systems.', 'Pemodelan assembly dan dokumentasi produksi untuk sistem straight, curved, roller, frame, dan koneksi.'],
@@ -179,10 +177,10 @@ const textPairs = [
   ['Used Node-RED to coordinate data movement and dashboard presentation.', 'Menggunakan Node-RED untuk mengatur perpindahan data dan presentasi dashboard.'],
   ['The project became a complete IIoT case study: field measurement, communication, database history, and visualization. It is one of the strongest portfolio examples because it shows both industrial context and digital systems thinking.', 'Proyek ini menjadi studi kasus IIoT yang lengkap: pengukuran lapangan, komunikasi, histori database, dan visualisasi. Ini menjadi salah satu contoh portofolio terkuat karena menunjukkan konteks industri sekaligus cara berpikir sistem digital.'],
   ['All projects', 'Semua proyek'],
-  ['Next: CP-Titanium Micro-Milling', 'Berikutnya: Micro-Milling CP-Titanium'],
+  ['Next: Feed-Rate Optimization in CP Titanium Micro-Milling', 'Berikutnya: Optimasi Feed Rate pada Micro-Milling CP Titanium'],
   ['Previous: PT Timah', 'Sebelumnya: PT Timah'],
   ['Next: Modular Roller Conveyor', 'Berikutnya: Roller Conveyor Modular'],
-  ['Previous: CP-Titanium', 'Sebelumnya: CP-Titanium'],
+  ['Previous: CP Titanium Micro-Milling', 'Sebelumnya: Micro-Milling CP Titanium'],
   ['Next: Smart Workshop Monitoring', 'Berikutnya: Monitoring Smart Workshop'],
   ['Previous: Conveyor', 'Sebelumnya: Conveyor'],
   ['Next: PLC Process Automation', 'Berikutnya: Otomasi Proses PLC'],
@@ -242,12 +240,12 @@ const titles = {
   en: {
     '/index.html': 'Amirul Hakim — Engineering Portfolio',
     '/': 'Amirul Hakim — Engineering Portfolio',
-    '/pt-timah-industrial-monitoring.html': 'Industrial Flowmeter Monitoring System - Amirul Hakim'
+    '/centralized-data-acquisition-monitoring-system.html': 'Centralized Data Acquisition and Monitoring System | Amirul Hakim'
   },
   id: {
     '/index.html': 'Amirul Hakim — Portofolio Engineering',
     '/': 'Amirul Hakim — Portofolio Engineering',
-    '/pt-timah-industrial-monitoring.html': 'Sistem Pemantauan Flowmeter Industri - Amirul Hakim'
+    '/centralized-data-acquisition-monitoring-system.html': 'Sistem Akuisisi dan Pemantauan Data Terpusat | Amirul Hakim'
   }
 };
 
@@ -296,7 +294,7 @@ const timahProjectTranslations = {
     'demo.description': 'A public portfolio reconstruction using physically consistent synthetic telemetry generated by an ESP32. It is not connected to PT Timah Industri infrastructure.',
     'demo.cta': 'Launch Live Demo', 'demo.previewLabel': 'Live dashboard preview', 'demo.previewTitle': 'Preview unavailable',
     'demo.previewText': 'The video could not be loaded.', 'nav.allProjects': 'All projects',
-    'nav.nextProject': 'Next: CP-Titanium Micro-Milling', 'footer.portfolio': 'Engineering Portfolio'
+    'nav.nextProject': 'Next: Feed-Rate Optimization in CP Titanium Micro-Milling', 'footer.portfolio': 'Engineering Portfolio'
   },
   id: {
     'nav.back': '← Kembali ke proyek', 'hero.context': 'PT Timah Industri · Departemen Maintenance · Proyek Magang',
@@ -342,7 +340,7 @@ const timahProjectTranslations = {
     'demo.description': 'Rekonstruksi portofolio publik menggunakan telemetri sintetis yang konsisten secara fisik dan dihasilkan oleh ESP32. Demo ini tidak terhubung ke infrastruktur PT Timah Industri.',
     'demo.cta': 'Buka Demo Langsung', 'demo.previewLabel': 'Pratinjau dasbor langsung', 'demo.previewTitle': 'Pratinjau tidak tersedia',
     'demo.previewText': 'Video tidak dapat dimuat.', 'nav.allProjects': 'Semua proyek',
-    'nav.nextProject': 'Berikutnya: Micro-Milling CP-Titanium', 'footer.portfolio': 'Portofolio Engineering'
+    'nav.nextProject': 'Berikutnya: Optimasi Feed Rate pada Micro-Milling CP Titanium', 'footer.portfolio': 'Portofolio Engineering'
   }
 };
 
@@ -429,5 +427,54 @@ setLanguage(localStorage.getItem('portfolio-language') || 'en');
 document.querySelectorAll('.lang-option').forEach(button => {
   button.addEventListener('click', () => setLanguage(button.dataset.lang));
 });
+
+function initializeImageLightbox() {
+  const lightbox = document.querySelector('.image-lightbox');
+  const lightboxImage = lightbox?.querySelector('img');
+  const closeButton = lightbox?.querySelector('.image-lightbox-close');
+  if (!lightbox || !lightboxImage || !document.body.classList.contains('wtp-page')) return;
+
+  const open = (source, alt = '') => {
+    lightboxImage.src = new URL(source, document.baseURI).href;
+    lightboxImage.alt = alt;
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    closeButton?.focus();
+  };
+
+  const close = () => {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.removeAttribute('src');
+  };
+
+  document.querySelectorAll('.wtp-page main img').forEach(image => {
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `Enlarge image: ${image.alt}`);
+    image.addEventListener('click', () => open(image.currentSrc || image.src, image.alt));
+    image.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        open(image.currentSrc || image.src, image.alt);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-lightbox-src]').forEach(trigger => {
+    trigger.addEventListener('click', () => open(trigger.dataset.lightboxSrc, 'Field installation work at the Water Treatment Plant'));
+  });
+  closeButton?.addEventListener('click', close);
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) close();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+  });
+}
+
+initializeImageLightbox();
 
 document.querySelector('#year').textContent = new Date().getFullYear();

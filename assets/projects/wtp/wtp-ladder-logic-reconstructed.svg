@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified WTP PLC ladder logic</title>
+  <desc id="desc">Four simplified ladder rungs reconstructed from the implemented online PLC program view.</desc>
+  <rect width="1400" height="900" fill="#f8fbfd"/>
+  <g fill="none" stroke="#102a43" stroke-width="5" stroke-linecap="square">
+    <path d="M90 70V830M1310 70V830"/>
+    <path d="M90 185H270M350 185H1160M1240 185H1310"/>
+    <path d="M270 145V225M350 145V225"/>
+    <circle cx="1200" cy="185" r="40"/>
+    <path d="M90 345H270M350 345H1160M1240 345H1310"/>
+    <path d="M270 305V385M350 305V385"/>
+    <circle cx="1200" cy="345" r="40"/>
+    <path d="M90 530H230M310 530H470M550 530H1160M1240 530H1310"/>
+    <path d="M230 490V570M310 490V570M470 490V570M550 490V570"/>
+    <path d="M150 530V650H230M310 650H390V530M230 610V690M310 610V690"/>
+    <circle cx="1200" cy="530" r="40"/>
+    <path d="M90 745H245M325 745H505M795 745H1160M1240 745H1310"/>
+    <path d="M245 705V785M325 705V785"/>
+    <rect x="505" y="690" width="290" height="110" rx="8"/>
+    <circle cx="1200" cy="745" r="40"/>
+  </g>
+  <g fill="#102a43" font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <text x="55" y="192" font-size="25">40</text>
+    <text x="310" y="120" font-size="25" font-weight="700">M000001</text><text x="310" y="145" font-size="20">M_Sns_2</text>
+    <text x="1200" y="115" font-size="25" font-weight="700">M000010</text><text x="1200" y="140" font-size="20">M_Mtr_1</text>
+    <text x="55" y="352" font-size="25">47</text>
+    <text x="310" y="280" font-size="25" font-weight="700">M000002</text><text x="310" y="305" font-size="20">M_Sns_3</text>
+    <text x="1200" y="275" font-size="25" font-weight="700">M000012</text><text x="1200" y="300" font-size="20">M_Mtr_3</text>
+    <text x="55" y="537" font-size="25">49</text>
+    <text x="270" y="462" font-size="22" font-weight="700">Mtr_4</text><text x="510" y="462" font-size="22" font-weight="700">Stop_Mtr_4</text>
+    <text x="270" y="605" font-size="22" font-weight="700">M000018</text><text x="270" y="632" font-size="19">M_Mtr_4</text>
+    <text x="1200" y="460" font-size="25" font-weight="700">M000018</text><text x="1200" y="485" font-size="20">M_Mtr_4</text>
+    <text x="55" y="752" font-size="25">53</text>
+    <text x="285" y="682" font-size="23" font-weight="700">AlwaysOn</text>
+    <text x="650" y="730" font-size="24" font-weight="700">D00100  ≤  D00101</text><text x="650" y="766" font-size="18">pH PV        pH setpoint</text>
+    <text x="1200" y="675" font-size="24" font-weight="700">M000022</text><text x="1200" y="700" font-size="20">A_Dosing</text>
+  </g>
+  <text x="90" y="38" fill="#1268c4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">SIMPLIFIED PLC LOGIC — RECONSTRUCTED FROM ONLINE PROGRAM VIEW</text>
+</svg>
