@@ -62,7 +62,7 @@ The strongest angle is not a generic software portfolio. It should feel like an 
 
 ## Project Set
 
-### PT Timah Industrial Monitoring
+### Centralized Data Acquisition and Monitoring System
 
 - Category: Industrial Systems
 - Status: Completed
@@ -123,14 +123,14 @@ The strongest angle is not a generic software portfolio. It should feel like an 
 - Homepage: `index.html`
 - Project pages folder: `projects/`
 - Language switch: ENG and IND toggle in the header, managed by `script.js` with the selected language saved in `localStorage`
-- PT Timah Industrial Monitoring: `projects/pt-timah-industrial-monitoring.html`
+- Centralized Data Acquisition and Monitoring System: `projects/centralized-data-acquisition-monitoring-system.html`
 - CP-Titanium Micro-Milling: `projects/cp-titanium-micro-milling.html`
 - Modular Roller Conveyor: `projects/modular-roller-conveyor.html`
 - Smart Workshop Monitoring: `projects/smart-workshop-monitoring.html`
 - PLC Process Automation: `projects/plc-process-automation.html`
 - Robotic Arm Platform: `projects/robotic-arm-platform.html`
 
-On GitHub Pages, these pages will open as separate URLs under the repository path, for example: `https://amirulihakim.github.io/repository-name/projects/pt-timah-industrial-monitoring.html`.
+On GitHub Pages, these pages will open as separate URLs under the repository path, for example: `https://amirulihakim.github.io/projects/centralized-data-acquisition-monitoring-system.html`.
 
 ## Missing Information To Fill Later
 
