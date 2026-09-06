@@ -247,6 +247,90 @@ const textPairs = [
   ['This planned project points toward the long game: using mechanical engineering as the base for robotics, automation, and intelligent physical systems.', 'Proyek rencana ini mengarah ke long game: menggunakan mechanical engineering sebagai dasar untuk robotika, otomasi, dan sistem fisik cerdas.']
 ];
 
+const wtpTextPairs = [
+  ['Water Treatment Plant PLC & HMI Automation', 'Otomasi PLC & HMI Water Treatment Plant'],
+  ['PLC/HMI-based monitoring and control system for an industrial Water Treatment Plant at PT Timah Industri, integrating pH and TDS instrumentation, automated chemical dosing, circulation control, and hardwired tank-refill logic.', 'Sistem monitoring dan kontrol berbasis PLC/HMI untuk Water Treatment Plant industri di PT Timah Industri, yang mengintegrasikan instrumentasi pH dan TDS, dosing kimia otomatis, kontrol sirkulasi, serta logika hardwired untuk pengisian tangki.'],
+  ['System overview', 'Ikhtisar Sistem'],
+  ['Automation project', 'Proyek otomasi'],
+  ['Process Measurement', 'Pengukuran Proses'],
+  ['pH and TDS instrumentation provide plant measurements.', 'Instrumentasi pH dan TDS menyediakan pengukuran proses plant.'],
+  ['PLC/HMI Control', 'Kontrol PLC/HMI'],
+  ['Autonics LP-A070 supervises monitoring and control logic.', 'Autonics LP-A070 menjalankan fungsi monitoring dan logika kontrol.'],
+  ['Process Actuation', 'Aktuasi Proses'],
+  ['Circulation, chemical dosing, and hardwired refill affect the process.', 'Sirkulasi, dosing kimia, dan sistem pengisian hardwired memengaruhi proses.'],
+  ['Problem & System Development', 'Permasalahan & Pengembangan Sistem'],
+  ['From manual treatment to coordinated control.', 'Dari pengolahan manual menuju kontrol yang terkoordinasi.'],
+  ['Operation was substantially manual, pH adjustment relied on soda ash, and process visibility was limited. The project added pH/TDS instrumentation, circulation, dosing, and coordinated PLC/HMI control.', 'Operasi sebelumnya sebagian besar masih manual, penyesuaian pH menggunakan soda ash, dan visibilitas proses terbatas. Proyek ini menambahkan instrumentasi pH/TDS, sirkulasi, dosing, serta kontrol PLC/HMI yang terkoordinasi.'],
+  ['Background', 'Latar Belakang'],
+  ['Manual WTP operation with chemical adjustment for boiler-feed-water pH.', 'Operasi WTP manual dengan penyesuaian kimia untuk pH air umpan boiler.'],
+  ['Problem', 'Permasalahan'],
+  ['Limited monitoring and inconsistent, repetitive process handling.', 'Monitoring terbatas serta penanganan proses yang berulang dan tidak konsisten.'],
+  ['Result', 'Hasil'],
+  ['Added circulation, instrumentation, PLC/HMI supervision, and more coordinated operation.', 'Menambahkan sirkulasi, instrumentasi, supervisi PLC/HMI, dan operasi yang lebih terkoordinasi.'],
+  ['Control wiring during project implementation.', 'Wiring kontrol selama implementasi proyek.'],
+  ['Before / After', 'Sebelum / Sesudah'],
+  ['Process Development', 'Pengembangan Proses'],
+  ['The modification added circulation, pH/TDS instrumentation, soda-ash dosing, and control integration.', 'Modifikasi menambahkan sirkulasi, instrumentasi pH/TDS, dosing soda ash, dan integrasi kontrol.'],
+  ['Before', 'Sebelum'],
+  ['After', 'Sesudah'],
+  ['The original arrangement was mostly manual; the modified process added circulation, pH/TDS instrumentation, soda-ash dosing, and integrated control.', 'Susunan awal sebagian besar masih manual; proses hasil modifikasi menambahkan sirkulasi, instrumentasi pH/TDS, dosing soda ash, dan kontrol terintegrasi.'],
+  ['System Architecture & Control', 'Arsitektur & Kontrol Sistem'],
+  ['Measurement, logic, and process actuation.', 'Pengukuran, logika, dan aktuasi proses.'],
+  ['Measurement', 'Pengukuran'],
+  ['pH and Supmea TDS instruments communicate through RS485 / Modbus RTU.', 'Instrumen pH dan TDS Supmea berkomunikasi melalui RS485 / Modbus RTU.'],
+  ['Autonics LP-A070-T9D6 supervises the process; D100 stores pH PV and D101 stores its setpoint.', 'Autonics LP-A070-T9D6 mengawasi proses; D100 menyimpan nilai proses pH dan D101 menyimpan setpoint.'],
+  ['Process control', 'Kontrol proses'],
+  ['Dosing is enabled below the pH setpoint and circulation promotes mixing. TDS is monitored, not presented as closed-loop control.', 'Dosing aktif ketika pH berada di bawah setpoint dan sirkulasi membantu pencampuran. TDS dipantau, bukan ditampilkan sebagai kontrol closed-loop.'],
+  ['Refill', 'Pengisian ulang'],
+  ['Low/high float switches, relays, and a solenoid valve form an independent hardwired circuit.', 'Float switch level rendah/tinggi, relay, dan katup solenoid membentuk rangkaian hardwired yang independen.'],
+  ['PLC Logic & HMI', 'Logika PLC & HMI'],
+  ['Control logic and operator interface.', 'Logika kontrol dan antarmuka operator.'],
+  ['The simplified logic preserves the visible sensor-derived internal states, the Motor 4 start/stop latch, and the pH comparison used for dosing.', 'Logika yang disederhanakan mempertahankan state internal dari sensor yang terlihat, latch start/stop Motor 4, serta perbandingan pH yang digunakan untuk dosing.'],
+  ['D00100 is the pH process value and D00101 is the setpoint. No additional meaning is assigned to partially obscured labels.', 'D00100 adalah nilai proses pH dan D00101 adalah setpoint. Tidak ada pemaknaan tambahan untuk label yang sebagian tertutup.'],
+  ['Simplified PLC logic reconstructed from the implemented online program view.', 'Logika PLC sederhana yang direkonstruksi dari tampilan program online yang telah diimplementasikan.'],
+  ['Process overview', 'Ikhtisar Proses'],
+  ['Overall WTP status and operator monitoring screen.', 'Layar status WTP secara keseluruhan dan monitoring operator.'],
+  ['pH control', 'Kontrol pH'],
+  ['Operator view for pH process value, setpoint, circulation, and dosing status.', 'Tampilan operator untuk nilai proses pH, setpoint, sirkulasi, dan status dosing.'],
+  ['Electrical system', 'Sistem elektrikal'],
+  ['Electrical Wiring & Control', 'Wiring & Kontrol Elektrikal'],
+  ['The control panel combines the three-phase circulation-motor circuit with relay-controlled auxiliary functions. The wiring arrangement was simplified from available project documentation and installed hardware.', 'Panel kontrol menggabungkan rangkaian motor sirkulasi tiga fasa dengan fungsi bantu yang dikendalikan relay. Susunan wiring disederhanakan dari dokumentasi proyek dan hardware terpasang yang tersedia.'],
+  ['380 V three-phase circulation-motor branch', 'Cabang motor sirkulasi tiga fasa 380 V'],
+  ['3-pole MCB, LC1D18M7 contactor, and thermal overload relay', 'MCB 3-pole, kontaktor LC1D18M7, dan thermal overload relay'],
+  ['Plug-in control relays, auxiliary wiring, and a single-pole MCB', 'Relay kontrol plug-in, wiring bantu, dan MCB single-pole'],
+  ['Project records specify 6 A for the single-phase breaker; the installed panel appears to show C16.', 'Dokumen proyek mencantumkan 6 A untuk breaker satu fasa; panel terpasang tampak menunjukkan C16.'],
+  ['Testing & Results', 'Pengujian & Hasil'],
+  ['Reported pH dosing response.', 'Respons dosing pH yang dilaporkan.'],
+  ['Reducing the dosing-pump setting substantially increased the time required for pH adjustment.', 'Penurunan pengaturan pompa dosing secara signifikan memperpanjang waktu penyesuaian pH.'],
+  ['pH increased from approximately 8.00 to 10.00 in', 'pH meningkat dari sekitar 8,00 menjadi 10,00 dalam'],
+  ['Lower dosing output required', 'Pengaturan dosing yang lebih rendah memerlukan'],
+  ['to reach the reported result.', 'untuk mencapai hasil yang dilaporkan.'],
+  ['Documentation', 'Dokumentasi'],
+  ['Photographs and original software views from the project.', 'Foto dan tampilan software asli dari proyek.'],
+  ['Control panel', 'Panel Kontrol'],
+  ['Installed panel during project implementation.', 'Panel yang terpasang selama implementasi proyek.'],
+  ['Wiring installation', 'Instalasi Wiring'],
+  ['Panel wiring during implementation.', 'Wiring panel selama implementasi.'],
+  ['PLC programming', 'Pemrograman PLC'],
+  ['AtLogic program observed during commissioning and testing.', 'Program AtLogic saat implementasi dan pengujian.'],
+  ['Circulatory pump', 'Pompa Sirkulasi'],
+  ['Installed circulation pump.', 'Pompa sirkulasi yang terpasang.'],
+  ['Dosing pump', 'Pompa Dosing'],
+  ['Installed chemical metering pump.', 'Pompa metering kimia yang terpasang.'],
+  ['Float switches', 'Float Switch'],
+  ['Low/high level sensing for the hardwired refill subsystem.', 'Sensor level rendah/tinggi untuk subsistem pengisian hardwired.'],
+  ['Solenoid valve', 'Katup Solenoid'],
+  ['Water inlet solenoid used by the refill circuit.', 'Solenoid inlet air yang digunakan oleh rangkaian pengisian.'],
+  ['Soda-ash preparation', 'Persiapan Soda Ash'],
+  ['Field preparation of the dosing solution.', 'Persiapan larutan dosing di lapangan.'],
+  ['pH controller', 'Kontroler pH'],
+  ['Installed process pH display.', 'Display pH proses yang terpasang.'],
+  ['pH test', 'Pengujian pH'],
+  ['Manual pH-check reference.', 'Referensi pemeriksaan pH manual.'],
+  ['Previous: Smart Workshop', 'Sebelumnya: Smart Workshop'],
+  ['Next: Robotic Arm Platform', 'Berikutnya: Platform Lengan Robot']
+];
+
 const focusItems = {
   en: ['Industrial automation & PLC', 'Instrumentation & IIoT data systems', 'Mechanical design & manufacturing', 'Robotics & mechatronics'],
   id: ['Otomasi industri & PLC', 'Instrumentasi & sistem data IIoT', 'Desain mekanik & manufaktur', 'Robotika & mekatronika']
@@ -256,12 +340,14 @@ const titles = {
   en: {
     '/index.html': 'Amirul Hakim — Engineering Portfolio',
     '/': 'Amirul Hakim — Engineering Portfolio',
-    '/centralized-data-acquisition-monitoring-system.html': 'Centralized Data Acquisition and Monitoring System | Amirul Hakim'
+    '/centralized-data-acquisition-monitoring-system.html': 'Centralized Data Acquisition and Monitoring System | Amirul Hakim',
+    '/plc-process-automation.html': 'Water Treatment Plant PLC & HMI Automation | Amirul Hakim'
   },
   id: {
     '/index.html': 'Amirul Hakim — Portofolio Engineering',
     '/': 'Amirul Hakim — Portofolio Engineering',
-    '/centralized-data-acquisition-monitoring-system.html': 'Sistem Akuisisi dan Pemantauan Data Terpusat | Amirul Hakim'
+    '/centralized-data-acquisition-monitoring-system.html': 'Sistem Akuisisi dan Pemantauan Data Terpusat | Amirul Hakim',
+    '/plc-process-automation.html': 'Otomasi PLC & HMI Water Treatment Plant | Amirul Hakim'
   }
 };
 
@@ -382,8 +468,9 @@ function createLanguageSwitch() {
 function translateTextNodes(lang) {
   const from = lang === 'id' ? 0 : 1;
   const to = lang === 'id' ? 1 : 0;
-  const map = new Map(textPairs.map(pair => [normalizeText(pair[from]), pair[to]]));
-  const stableMap = new Map(textPairs.map(pair => [normalizeText(pair[0]), pair[lang === 'id' ? 1 : 0]]));
+  const activePairs = document.body.classList.contains('wtp-page') ? [...textPairs, ...wtpTextPairs] : textPairs;
+  const map = new Map(activePairs.map(pair => [normalizeText(pair[from]), pair[to]]));
+  const stableMap = new Map(activePairs.map(pair => [normalizeText(pair[0]), pair[lang === 'id' ? 1 : 0]]));
   const selector = 'a, button, h1, h2, h3, p, span, strong, figcaption, small, dt, dd, li';
 
   document.querySelectorAll('[data-i18n]').forEach(element => {
