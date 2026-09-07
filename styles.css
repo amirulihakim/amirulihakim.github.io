@@ -388,6 +388,7 @@ h3 { font-size: 1.45rem; }
 .project-visual-timah::after { z-index: 1; }
 .project-visual-timah span { position: relative; z-index: 2; }
 .project-visual-wtp > img { object-fit: contain; object-position: center; background:#edf4fa; }
+.project-visual-thesis > img { object-position: 62% 52%; }
 .visual-iot { background: radial-gradient(circle at 25% 25%, #4d8dff, transparent 27%), linear-gradient(135deg,#1a2131,#31476f); }
 .visual-titanium { background: radial-gradient(circle at 70% 25%, #c5ccd5, transparent 20%), linear-gradient(135deg,#50555d,#1c1e21); }
 .visual-conveyor { background: linear-gradient(145deg,#40312b,#8f725f); }
@@ -831,7 +832,7 @@ h3 { font-size: 1.45rem; }
 
 /* Bachelor thesis case study */
 .thesis-page { --thesis-navy:#071a38; --thesis-blue:#1268c4; --thesis-cyan:#45b7e8; background:#f5f7fa; }
-.thesis-hero { background-color:#06152e; background-image:linear-gradient(90deg,rgba(3,15,34,.99) 0%,rgba(3,15,34,.97) 31%,rgba(5,24,50,.82) 48%,rgba(5,24,50,.38) 68%,rgba(6,24,47,.08) 100%),url("assets/projects/micromilling/micro-milling-hero.jpg"); background-position:center,68% 60%; }
+.thesis-hero { background-color:#06152e; background-image:linear-gradient(90deg,rgba(3,15,34,.99) 0%,rgba(3,15,34,.97) 31%,rgba(5,24,50,.82) 48%,rgba(5,24,50,.38) 68%,rgba(6,24,47,.08) 100%),url("assets/projects/micromilling/micro-milling-hero.jpg"); background-position:center,center; }
 .thesis-hero .container { position:relative; z-index:1; }
 .thesis-hero-grid { grid-template-columns:minmax(0,850px); }
 .thesis-hero h1 { font-size:clamp(2.65rem,4vw,4.2rem); }
@@ -920,7 +921,7 @@ h3 { font-size: 1.45rem; }
   .thesis-measure-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:700px) {
-  .thesis-hero { background-image:linear-gradient(90deg,rgba(6,21,46,.98),rgba(6,21,46,.88) 62%,rgba(6,21,46,.56)),url("assets/projects/micromilling/micro-milling-hero.jpg"); background-position:center,58% 56%; }
+  .thesis-hero { background-image:linear-gradient(90deg,rgba(6,21,46,.98),rgba(6,21,46,.88) 62%,rgba(6,21,46,.56)),url("assets/projects/micromilling/micro-milling-hero.jpg"); background-position:center,62% center; }
   .thesis-hero h1 { font-size:clamp(2.1rem,10vw,3.4rem); }
   .thesis-parameter-grid,.thesis-equation-grid,.thesis-evidence-grid,.thesis-best-result > div,.thesis-future-grid,.thesis-measure-media-grid { grid-template-columns:1fr; }
   .thesis-measure-grid { grid-template-columns:1fr; }
