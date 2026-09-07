@@ -331,6 +331,28 @@ const wtpTextPairs = [
   ['Next: Robotic Arm Platform', 'Berikutnya: Platform Lengan Robot']
 ];
 
+const thesisTextPairs = [
+  ['Micro-Milling Research · Bachelor Thesis', 'Riset Micro-Milling · Tugas Akhir'],
+  ['Experimental study of dimensional accuracy, burr formation, cutting temperature, and chip characteristics in CP Titanium I-Plate micro-milling.', 'Studi eksperimental mengenai akurasi dimensi, pembentukan burr, temperatur pemotongan, dan karakteristik geram pada micro-milling I-Plate berbahan CP Titanium.'],
+  ['Research overview', 'Ikhtisar riset'],
+  ['Experimental study', 'Studi eksperimental'],
+  ['I-Plate Geometry Design', 'Desain Geometri I-Plate'],
+  ['Nominal geometry, manufacturing dimensions, and tool-access constraints defined.', 'Geometri nominal, dimensi manufaktur, dan batasan akses pahat ditetapkan.'],
+  ['Micro-Milling Experiment', 'Eksperimen Micro-Milling'],
+  ['CP Titanium specimens machined across controlled feed-rate conditions.', 'Spesimen CP Titanium dimesin pada kondisi feed rate yang terkontrol.'],
+  ['Dimensional, Burr & Thermal Analysis', 'Analisis Dimensi, Burr & Termal'],
+  ['Geometric accuracy, burr formation, and cutting temperature evaluated.', 'Akurasi geometri, pembentukan burr, dan temperatur pemotongan dievaluasi.'],
+  ['Engineering Questions', 'Pertanyaan Teknik'],
+  ['Why does feed rate matter at the microscale?', 'Mengapa feed rate penting pada skala mikro?'],
+  ['Background', 'Latar Belakang'],
+  ['CP Titanium combines high ductility with low thermal conductivity. At micro-scale cutting conditions, these characteristics make dimensional control and burr formation particularly sensitive to the relationship between feed per tooth and the cutting-edge scale.', 'CP Titanium memiliki keuletan tinggi dan konduktivitas termal rendah. Pada kondisi pemotongan skala mikro, karakteristik ini membuat kontrol dimensi dan pembentukan burr sangat sensitif terhadap hubungan antara feed per tooth dan skala mata potong.'],
+  ['Aim', 'Tujuan'],
+  ['The study varied feed rate from 10 to 100 mm/min while holding spindle speed, depth of cut, tool geometry, and dry-cutting conditions constant. The objective was to observe how increasing feed changed dimensional accuracy, burr height, contact temperature, and chip formation.', 'Penelitian memvariasikan feed rate dari 10 hingga 100 mm/min dengan mempertahankan spindle speed, depth of cut, geometri pahat, dan kondisi dry cutting tetap konstan. Tujuannya adalah mengamati pengaruh peningkatan feed terhadap akurasi dimensi, tinggi burr, temperatur kontak, dan pembentukan geram.'],
+  ['Result', 'Hasil'],
+  ['Higher feed rates produced progressively better dimensional accuracy and lower burr height within the investigated range. The strongest tested condition was 100 mm/min, reaching 99.4% mean dimensional accuracy and 38.2 µm mean burr height, while the maximum measured contact temperature occurred at 90 mm/min.', 'Feed rate yang lebih tinggi menghasilkan peningkatan akurasi dimensi dan penurunan tinggi burr secara bertahap dalam rentang penelitian. Kondisi pengujian terbaik adalah 100 mm/min dengan akurasi dimensi rata-rata 99,4% dan tinggi burr rata-rata 38,2 µm, sedangkan temperatur kontak maksimum terukur terjadi pada 90 mm/min.'],
+  ['Micro-milling experiment with in-process thermal monitoring.', 'Eksperimen micro-milling dengan monitoring termal selama proses.']
+];
+
 const focusItems = {
   en: ['Industrial automation & PLC', 'Instrumentation & IIoT data systems', 'Mechanical design & manufacturing', 'Robotics & mechatronics'],
   id: ['Otomasi industri & PLC', 'Instrumentasi & sistem data IIoT', 'Desain mekanik & manufaktur', 'Robotika & mekatronika']
@@ -468,7 +490,11 @@ function createLanguageSwitch() {
 function translateTextNodes(lang) {
   const from = lang === 'id' ? 0 : 1;
   const to = lang === 'id' ? 1 : 0;
-  const activePairs = document.body.classList.contains('wtp-page') ? [...textPairs, ...wtpTextPairs] : textPairs;
+  const activePairs = document.body.classList.contains('wtp-page')
+    ? [...textPairs, ...wtpTextPairs]
+    : document.body.classList.contains('thesis-page')
+      ? [...textPairs, ...thesisTextPairs]
+      : textPairs;
   const map = new Map(activePairs.map(pair => [normalizeText(pair[from]), pair[to]]));
   const stableMap = new Map(activePairs.map(pair => [normalizeText(pair[0]), pair[lang === 'id' ? 1 : 0]]));
   const selector = 'a, button, h1, h2, h3, p, span, strong, figcaption, small, dt, dd, li';
