@@ -831,30 +831,25 @@ h3 { font-size: 1.45rem; }
 
 /* Bachelor thesis case study */
 .thesis-page { --thesis-navy:#071a38; --thesis-blue:#1268c4; --thesis-cyan:#45b7e8; background:#f5f7fa; }
-.thesis-hero { padding:24px 0 36px; color:#fff; background:linear-gradient(120deg,#06152e,#0b2d50 70%,#124d70); }
-.thesis-hero-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr); gap:44px; align-items:end; }
+.thesis-hero { position:relative; overflow:hidden; padding:24px 0 36px; color:#fff; background-color:#06152e; background-image:linear-gradient(90deg,#06152e 0%,rgba(6,21,46,.98) 38%,rgba(6,21,46,.78) 56%,rgba(6,21,46,.24) 78%,rgba(6,21,46,.08) 100%),url("assets/projects/micromilling/micro-milling-hero.jpg"); background-position:center,72% 48%; background-size:cover; }
+.thesis-hero .container { position:relative; z-index:1; }
+.thesis-hero-grid { display:grid; grid-template-columns:minmax(0,850px); }
 .thesis-hero h1 { max-width:850px; margin:0 0 16px; font-size:clamp(2.45rem,4.7vw,4.8rem); line-height:.96; letter-spacing:-.052em; }
 .thesis-formal-title { max-width:720px; margin:15px 0 0; color:#9ebbd1; font-size:.77rem; font-style:italic; line-height:1.5; }
 .thesis-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:20px; }
 .thesis-tags span { padding:6px 9px; color:#cfe9f7; font-size:.68rem; font-weight:750; border:1px solid rgba(118,196,231,.35); border-radius:999px; background:rgba(255,255,255,.06); }
-.thesis-hero-side { display:grid; gap:14px; }
-.thesis-meta { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); margin:0; border:1px solid rgba(137,196,231,.25); border-radius:12px; background:rgba(3,15,34,.38); }
-.thesis-meta div { padding:13px; border-bottom:1px solid rgba(255,255,255,.1); }
-.thesis-meta div:nth-child(odd) { border-right:1px solid rgba(255,255,255,.1); }
-.thesis-meta div:nth-last-child(-n+2) { border-bottom:0; }
-.thesis-meta dt { color:#79c9ec; font-size:.63rem; font-weight:850; letter-spacing:.1em; text-transform:uppercase; }
-.thesis-meta dd { margin:4px 0 0; color:#f2f7fa; font-size:.76rem; line-height:1.4; }
 .thesis-asset-slot { display:flex; min-height:220px; flex-direction:column; align-items:center; justify-content:center; padding:24px; text-align:center; border:1px dashed #7ba2bd; border-radius:12px; background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.035)); }
 .thesis-asset-slot strong { color:inherit; font-size:.85rem; }
 .thesis-asset-slot span { margin-top:7px; color:#8ca9bd; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.65rem; }
-.thesis-hero-slot { min-height:110px; color:#dbeaf3; }
-.thesis-overview-copy { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
-.thesis-overview-copy p { margin:0; line-height:1.65; }
-.thesis-stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:26px; }
-.thesis-stat-grid article { min-height:126px; padding:19px; border:1px solid #d3e1eb; border-radius:11px; background:#fff; box-shadow:0 10px 24px rgba(7,26,56,.06); }
-.thesis-stat-grid strong,.thesis-stat-grid span { display:block; }
-.thesis-stat-grid strong { color:var(--thesis-blue); font-size:clamp(1.55rem,2.7vw,2.35rem); letter-spacing:-.035em; }
-.thesis-stat-grid span { margin-top:8px; color:#506176; font-size:.73rem; font-weight:750; line-height:1.4; }
+.thesis-research-overview { overflow:hidden; color:#fff; border:1px solid #294765; border-radius:13px; background:var(--thesis-navy); box-shadow:0 14px 32px rgba(7,26,56,.12); }
+.thesis-overview-head { display:flex; justify-content:space-between; gap:20px; padding:13px 17px; color:#8fd5f1; font-size:.65rem; font-weight:850; letter-spacing:.09em; text-transform:uppercase; border-bottom:1px solid #294765; }
+.thesis-overview-flow { display:grid; grid-template-columns:repeat(2,minmax(0,1fr) 38px) minmax(0,1fr); align-items:center; padding:20px; }
+.thesis-overview-flow article { text-align:center; }
+.thesis-overview-flow strong,.thesis-overview-flow span { display:block; }
+.thesis-overview-flow strong { color:#fff; font-size:.82rem; }
+.thesis-overview-flow span { margin-top:6px; color:#afc3d5; font-size:.69rem; line-height:1.45; }
+.thesis-overview-flow i { position:relative; height:1px; background:#63c5ed; }
+.thesis-overview-flow i::after { content:""; position:absolute; right:0; top:-3px; width:6px; height:6px; border-top:1px solid #8fd5f1; border-right:1px solid #8fd5f1; transform:rotate(45deg); }
 .thesis-dark { color:#fff; background:var(--thesis-navy); border-block:1px solid #294765; }
 .thesis-dark h2 { color:#fff; }
 .thesis-dark .timah-section-label { color:#63c5ed; }
@@ -867,6 +862,7 @@ h3 { font-size: 1.45rem; }
 .thesis-workflow i { position:relative; height:1px; background:#65bfe8; }
 .thesis-workflow i::after { content:""; position:absolute; right:0; top:-3px; width:6px; height:6px; border-top:1px solid #89d4f1; border-right:1px solid #89d4f1; transform:rotate(45deg); }
 .thesis-setup-layout { display:grid; grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr); gap:24px; }
+.thesis-drawing-media img { width:100%; height:100%; min-height:300px; object-fit:contain; background:#f5f7f8; }
 .thesis-drawing-slot { min-height:335px; color:#29405a; background:#edf3f7; }
 .thesis-parameter-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
 .thesis-parameter-grid article { padding:15px; border:1px solid #d5e0e8; border-radius:9px; background:#fff; }
@@ -874,14 +870,15 @@ h3 { font-size: 1.45rem; }
 .thesis-parameter-grid span { color:var(--thesis-blue); font-size:.62rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
 .thesis-parameter-grid strong { margin-top:5px; color:#1b2d43; font-size:.82rem; }
 .thesis-parameter-grid small { margin-top:3px; color:#728094; font-size:.67rem; }
-.thesis-range { display:flex; align-items:center; gap:8px; margin-top:18px; padding:13px 16px; overflow-x:auto; color:#657488; font-size:.7rem; border:1px solid #d5e0e8; border-radius:9px; background:#fff; }
-.thesis-range i { min-width:16px; height:1px; flex:1; background:#b8cad7; }
-.thesis-range strong { color:var(--thesis-blue); white-space:nowrap; }
 .thesis-measure-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
 .thesis-measure-grid article,.thesis-equation-grid article { padding:18px; border:1px solid #315577; border-radius:10px; background:#0d2948; }
 .thesis-measure-grid strong { color:#fff; font-size:.82rem; }
 .thesis-measure-grid ul { margin:11px 0 0; padding-left:16px; color:#b8cadb; font-size:.7rem; line-height:1.6; }
 .thesis-measure-note { margin:16px 0; font-size:.76rem; }
+.thesis-measure-media-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; width:min(100%,1050px); margin:16px auto 22px; }
+.thesis-measure-media-grid figure { margin:0; overflow:hidden; border:1px solid #315577; border-radius:10px; background:#0d2948; }
+.thesis-measure-media-grid img { display:block; width:100%; aspect-ratio:4/3; object-fit:contain; object-position:center; background:#08172a; }
+.thesis-measure-media-grid figcaption { padding:11px 13px; color:#b8cadb; font-size:.72rem; line-height:1.45; }
 .thesis-equation-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
 .thesis-equation-grid span,.thesis-equation-grid strong { display:block; }
 .thesis-equation-grid span { color:#63c5ed; font-size:.63rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
@@ -916,6 +913,11 @@ h3 { font-size: 1.45rem; }
 .thesis-evidence-grid figure { margin:0; overflow:hidden; border:1px solid #294765; border-radius:12px; background:#0d233f; }
 .thesis-evidence-grid .thesis-asset-slot { min-height:260px; border:0; border-bottom:1px dashed #466681; border-radius:0; color:#e2edf4; }
 .thesis-evidence-grid figcaption { padding:13px 15px; color:#aabed0; font-size:.72rem; line-height:1.5; }
+.thesis-evidence-media { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:center; background:#eaf0f5; }
+.thesis-evidence-media.thesis-media-contain { object-fit:contain; }
+.thesis-process-video { width:min(100%,900px); margin:20px auto 0; overflow:hidden; border:1px solid #294765; border-radius:12px; background:#08172a; }
+.thesis-process-video video { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; background:#030b15; }
+.thesis-process-video figcaption { padding:13px 15px; color:#aabed0; font-size:.72rem; line-height:1.5; }
 .thesis-takeaway > p { max-width:920px; line-height:1.65; }
 .thesis-future-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:22px; }
 .thesis-future-grid span { padding:13px; color:#29405a; font-size:.72rem; font-weight:750; text-align:center; border:1px solid #d2e0ea; border-radius:8px; background:#edf4f8; }
@@ -928,14 +930,17 @@ h3 { font-size: 1.45rem; }
   .thesis-workflow article { min-height:0; }
   .thesis-workflow i { width:1px; height:18px; margin:0 auto; }
   .thesis-workflow i::after { right:-3px; top:11px; transform:rotate(135deg); }
-  .thesis-measure-grid,.thesis-stat-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .thesis-measure-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:700px) {
+  .thesis-hero { background-image:linear-gradient(90deg,rgba(6,21,46,.98),rgba(6,21,46,.88) 62%,rgba(6,21,46,.56)),url("assets/projects/micromilling/micro-milling-hero.jpg"); background-position:center,58% center; }
   .thesis-hero h1 { font-size:clamp(2.1rem,10vw,3.4rem); }
-  .thesis-overview-copy,.thesis-parameter-grid,.thesis-equation-grid,.thesis-evidence-grid,.thesis-best-result > div,.thesis-future-grid { grid-template-columns:1fr; }
-  .thesis-meta,.thesis-measure-grid { grid-template-columns:1fr; }
-  .thesis-meta div,.thesis-meta div:nth-child(odd) { border-right:0; border-bottom:1px solid rgba(255,255,255,.1); }
-  .thesis-meta div:last-child { border-bottom:0; }
+  .thesis-parameter-grid,.thesis-equation-grid,.thesis-evidence-grid,.thesis-best-result > div,.thesis-future-grid,.thesis-measure-media-grid { grid-template-columns:1fr; }
+  .thesis-measure-grid { grid-template-columns:1fr; }
+  .thesis-overview-head { align-items:flex-start; flex-direction:column; gap:4px; }
+  .thesis-overview-flow { grid-template-columns:1fr; gap:0; }
+  .thesis-overview-flow i { width:1px; height:18px; margin:0 auto; }
+  .thesis-overview-flow i::after { right:-3px; top:11px; transform:rotate(135deg); }
   .thesis-result-card { padding:17px; }
   .thesis-chart { min-height:220px; overflow-x:auto; }
   .thesis-chart svg { min-width:520px; }
