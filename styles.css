@@ -1097,11 +1097,15 @@ h3 { font-size: 1.45rem; }
 .wtp-architecture-heading h2 { white-space:nowrap; }
 .wtp-architecture-layout { grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr); align-items:start; }
 .wtp-architecture-layout .wtp-dark-callouts { height:100%; margin:0; align-content:space-between; }
-.wtp-plc-layout { grid-template-columns:minmax(260px,.65fr) minmax(0,1.35fr); gap:44px; align-items:center; }
-.wtp-plc-layout > div:first-child p { max-width:460px; }
+.wtp-plc-layout { grid-template-columns:minmax(250px,.48fr) minmax(0,1fr); gap:36px; align-items:start; }
+.wtp-plc-copy { display:grid; gap:11px; }
+.wtp-plc-copy article { padding-bottom:10px; border-bottom:1px solid rgba(7,26,56,.13); }
+.wtp-plc-copy article:last-of-type { border-bottom:0; }
+.wtp-plc-copy strong { color:var(--wtp-blue); font-size:.65rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.wtp-plc-layout > div:first-child p { max-width:430px; margin:4px 0 0; font-size:.72rem; line-height:1.45; }
 .wtp-plc-layout code { color:#1268c4; font-size:.78rem; font-weight:750; }
 .wtp-plc-layout small { display:block; max-width:440px; color:#718093; font-size:.68rem; }
-.wtp-ladder-media img { max-height:480px; }
+.wtp-ladder-media img { max-height:560px; object-fit:contain; }
 .wtp-hmi-pair { margin-top:24px; }
 .wtp-hmi-pair article { display:grid; min-width:0; align-content:start; grid-template-rows:auto auto auto; }
 .wtp-hmi-pair .wtp-technical-visual { width:100%; aspect-ratio:16/10; }
