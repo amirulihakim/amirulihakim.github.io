@@ -1088,6 +1088,7 @@ h3 { font-size: 1.45rem; }
 .wtp-process-compare article,.wtp-hmi-pair article,.wtp-result-grid article { min-width:0; }
 .wtp-process-compare article > span,.wtp-hmi-pair article > span,.wtp-result-grid article > span { display:block; margin-top:11px; color:var(--wtp-blue); font-size:.68rem; font-weight:850; letter-spacing:.1em; text-transform:uppercase; }
 .wtp-process-compare p,.wtp-hmi-pair p,.wtp-result-grid p { margin:4px 0 0; font-size:.78rem; line-height:1.45; }
+.wtp-process-intro { max-width:760px; margin:-14px 0 24px; }
 .wtp-process-summary { max-width:760px; margin:16px auto 0; text-align:center; }
 .wtp-technical-visual { display:grid; place-items:center; min-width:0; overflow:hidden; background:transparent; }
 .wtp-technical-visual img { display:block; width:100%; height:auto; object-fit:contain; cursor:zoom-in; }
@@ -1097,7 +1098,7 @@ h3 { font-size: 1.45rem; }
 .wtp-architecture-heading h2 { white-space:nowrap; }
 .wtp-architecture-layout { grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr); align-items:start; }
 .wtp-architecture-layout .wtp-dark-callouts { height:100%; margin:0; align-content:space-between; }
-.wtp-plc-layout { grid-template-columns:minmax(250px,.48fr) minmax(0,1fr); gap:36px; align-items:start; }
+.wtp-plc-layout { grid-template-columns:minmax(250px,.48fr) minmax(0,1fr); gap:36px; align-items:end; }
 .wtp-plc-copy { display:grid; gap:11px; }
 .wtp-plc-copy article { padding-bottom:10px; border-bottom:1px solid rgba(7,26,56,.13); }
 .wtp-plc-copy article:last-of-type { border-bottom:0; }
@@ -1107,10 +1108,10 @@ h3 { font-size: 1.45rem; }
 .wtp-plc-layout small { display:block; max-width:440px; color:#718093; font-size:.68rem; }
 .wtp-ladder-media img { max-height:560px; object-fit:contain; }
 .wtp-hmi-pair { margin-top:24px; }
-.wtp-hmi-pair article { display:grid; min-width:0; align-content:start; grid-template-rows:auto auto auto; }
+.wtp-hmi-pair article { display:grid; min-width:0; overflow:hidden; align-content:start; grid-template-rows:auto 1fr; border:1px solid #a9cce6; border-radius:11px; background:#fff; }
 .wtp-hmi-pair .wtp-technical-visual { width:100%; aspect-ratio:16/10; }
 .wtp-hmi-pair .wtp-technical-visual img { width:100%; height:100%; max-height:330px; object-fit:contain; }
-.wtp-hmi-copy { width:100%; margin-top:11px; }
+.wtp-hmi-copy { width:100%; padding:13px 16px 15px; border-top:1px solid #d6e4ee; }
 .wtp-hmi-copy span { display:block; color:var(--wtp-blue); font-size:.68rem; font-weight:850; letter-spacing:.1em; text-transform:uppercase; }
 .wtp-hmi-copy p { margin:4px 0 0; }
 .wtp-electrical-layout > div:first-child > p:not(.timah-section-label) { color:#b6c8d8; }
@@ -1118,10 +1119,10 @@ h3 { font-size: 1.45rem; }
 .wtp-result-grid article { display:grid; min-width:0; align-content:start; grid-template-rows:auto auto; }
 .wtp-result-grid .wtp-technical-visual { width:100%; aspect-ratio:16/10; }
 .wtp-result-grid .wtp-technical-visual img { width:100%; height:100%; max-height:390px; object-fit:contain; }
-.wtp-result-summary { display:flex; width:min(88%,440px); height:112px; margin:14px auto 0; flex-direction:column; align-items:center; justify-content:center; padding:15px 18px; color:#fff; text-align:center; border:1px solid #315577; border-radius:10px; background:#0d2948; }
-.wtp-result-grid .wtp-result-summary span { margin-top:0; color:#63c5ed; }
-.wtp-result-grid .wtp-result-summary p { margin-top:5px; color:#d3dfeb; }
-.wtp-result-summary strong { color:#fff; }
+.wtp-result-summary { display:flex; width:min(88%,440px); height:112px; margin:14px auto 0; flex-direction:column; align-items:center; justify-content:center; padding:15px 18px; color:#102f4f; text-align:center; border:1px solid #6cadd9; border-radius:10px; background:#9dcef0; }
+.wtp-result-grid .wtp-result-summary span { margin-top:0; color:#0b568f; }
+.wtp-result-grid .wtp-result-summary p { margin-top:5px; color:#173b5c; }
+.wtp-result-summary strong { color:#071a38; }
 .wtp-evidence-grid img,.wtp-page main img { cursor:zoom-in; }
 .image-lightbox { position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center; padding:54px 24px 24px; background:rgba(2,8,18,.94); }
 .image-lightbox.is-open { display:flex; }
