@@ -284,24 +284,24 @@ const wtpTextPairs = [
   ['Refill', 'Pengisian ulang'],
   ['Low/high float switches operate the refill solenoid through independent hardwired relay logic, although the relay hardware is located in the auxiliary control-panel enclosure.', 'Float switch level rendah/tinggi mengoperasikan solenoid pengisian melalui logika relay hardwired yang independen, meskipun hardware relay berada di dalam enclosure panel kontrol bantu.'],
   ['PLC Logic & HMI', 'Logika PLC & HMI'],
-  ['Control logic and operator interface.', 'Logika kontrol dan antarmuka operator.'],
+  ['Control logic and operator interface.', 'Logika kendali dan antarmuka operator.'],
   ['Input handling', 'Penanganan input'],
-  ['Physical X inputs and manual M_Man_Sns overrides are combined into normalized M_Sns internal states.', 'Input fisik X dan override manual M_Man_Sns digabungkan menjadi state internal M_Sns yang ternormalisasi.'],
+  ['Physical X inputs and manual M_Man_Sns overrides are combined into normalized M_Sns internal states.', 'Input fisik X dan override manual M_Man_Sns digabungkan menjadi status internal M_Sns yang telah dinormalisasi.'],
   ['Process sequencing', 'Urutan proses'],
-  ['Normalized process states generate the internal motor and valve commands used by the control program. M_Sns_2 coordinates Motor 1, Motor 2, and SV2 as one process group, while M_Sns_3 commands Motor 3.', 'State proses yang ternormalisasi menghasilkan perintah internal motor dan katup yang digunakan program kontrol. M_Sns_2 mengoordinasikan Motor 1, Motor 2, dan SV2 sebagai satu kelompok proses, sedangkan M_Sns_3 memerintahkan Motor 3.'],
-  ['Circulation control', 'Kontrol sirkulasi'],
-  ['Pump 4 uses HMI start/stop commands to latch M_Mtr_4. The retained run state passes through the TOR_4 overload permissive before the physical Pompa_On output is energized.', 'Pompa 4 menggunakan perintah start/stop HMI untuk melatch M_Mtr_4. State operasi yang dipertahankan melewati permissive overload TOR_4 sebelum output fisik Pompa_On diaktifkan.'],
-  ['pH dosing control', 'Kontrol dosing pH'],
-  ['The GWQ pH process value is transferred through RS485 / Modbus RTU into D00100, while D00101 stores the pH setpoint. The comparison generates M000022 Dosing_Pump; the automatic path is qualified through the SV4 state and operator dosing-stop command before Y_Dosing is energized.', 'Nilai proses pH GWQ ditransfer melalui RS485 / Modbus RTU ke D00100, sedangkan D00101 menyimpan setpoint pH. Hasil perbandingan menghasilkan M000022 Dosing_Pump; jalur otomatis kemudian dikualifikasi melalui state SV4 dan perintah dosing-stop operator sebelum Y_Dosing diaktifkan.'],
+  ['Normalized process states generate the internal motor and valve commands used by the control program. M_Sns_2 coordinates Motor 1, Motor 2, and SV2 as one process group, while M_Sns_3 commands Motor 3.', 'Status proses yang telah dinormalisasi menghasilkan perintah internal motor dan katup yang digunakan oleh program kendali. M_Sns_2 mengoordinasikan Motor 1, Motor 2, dan SV2 sebagai satu kelompok proses, sedangkan M_Sns_3 mengendalikan Motor 3.'],
+  ['Circulation control', 'Kendali sirkulasi'],
+  ['Pump 4 uses HMI start/stop commands to latch M_Mtr_4. The retained run state passes through the TOR_4 overload permissive before the physical Pompa_On output is energized.', 'Pompa 4 menggunakan perintah start/stop dari HMI untuk mempertahankan status M_Mtr_4. Status operasi tersebut diteruskan melalui permissive overload TOR_4 sebelum output fisik Pompa_On diaktifkan.'],
+  ['pH dosing control', 'Kendali dosing pH'],
+  ['The GWQ pH process value is transferred through RS485 / Modbus RTU into D00100, while D00101 stores the pH setpoint. The comparison generates M000022 Dosing_Pump; the automatic dosing path is then qualified through the SV4 state and operator dosing-stop command before Y_Dosing is energized.', 'Nilai proses pH dari GWQ ditransfer melalui RS485 / Modbus RTU ke D00100, sedangkan D00101 menyimpan setpoint pH. Hasil perbandingan menghasilkan M000022 Dosing_Pump; jalur dosing otomatis kemudian dipersyaratkan oleh status SV4 dan perintah stop dosing dari operator sebelum Y_Dosing diaktifkan.'],
   ['PLC tag map', 'Peta tag PLC'],
   ['Tag / area', 'Tag / area'],
   ['Type', 'Tipe'],
   ['Function', 'Fungsi'],
   ['Physical process inputs', 'Input fisik proses'],
-  ['HMI/manual input overrides', 'Override input HMI/manual'],
-  ['Normalized process states', 'State proses ternormalisasi'],
-  ['Internal motor commands/states', 'Perintah/state internal motor'],
-  ['Internal valve / control-mode states', 'State internal katup / mode kontrol'],
+  ['HMI/manual input overrides', 'Override input manual/HMI'],
+  ['Normalized process states', 'Status proses terstandardisasi'],
+  ['Internal motor commands/states', 'Perintah/status internal motor'],
+  ['Internal valve / control-mode states', 'Status internal katup / mode kendali'],
   ['pH process value', 'Nilai proses pH'],
   ['pH setpoint', 'Setpoint pH'],
   ['Pump-4 overload permissive', 'Permissive overload Pompa 4'],
@@ -313,11 +313,11 @@ const wtpTextPairs = [
   ['pH dosing', 'Dosing pH'],
   ['The GWQ pH value is mapped through RS485 / Modbus into D00100. D00101 stores the pH setpoint. The recovered comparison generates M000022 Dosing_Pump.', 'Nilai pH GWQ dipetakan melalui RS485 / Modbus ke D00100. D00101 menyimpan setpoint pH. Perbandingan yang dipulihkan menghasilkan M000022 Dosing_Pump.'],
   ['Recovered and reconstructed logic; inferred output mappings are distinguished from directly observed program logic.', 'Logika hasil pemulihan dan rekonstruksi; pemetaan output yang diinferensikan dibedakan dari logika program yang diamati secara langsung.'],
-  ['Process overview', 'Ikhtisar Proses'],
-  ['Process-status overview with operator controls for the existing WTP stages and coordinated equipment states.', 'Ikhtisar status proses dengan kontrol operator untuk tahapan WTP yang sudah ada dan state peralatan yang terkoordinasi.'],
+  ['Process overview', 'Ikhtisar proses'],
+  ['Process-status overview with operator controls for the existing WTP stages and coordinated equipment states.', 'Tampilan status proses dengan kendali operator untuk tahapan WTP dan status peralatan yang terkoordinasi.'],
   ['Legacy WTP process overview showing pump, valve, level, and operating states.', 'Ikhtisar proses WTP lama yang menampilkan state pompa, katup, level, dan operasi.'],
-  ['pH control', 'Kontrol pH'],
-  ['Operator interface for pH PV/SV, circulation control, automatic dosing, and dosing-pump status.', 'Antarmuka operator untuk PV/SV pH, kontrol sirkulasi, dosing otomatis, dan status pompa dosing.'],
+  ['pH control', 'Kendali pH'],
+  ['Operator interface for pH PV/SV, circulation control, automatic dosing, and dosing-pump status.', 'Antarmuka operator untuk PV/SV pH, kendali sirkulasi, dosing otomatis, dan status dosing pump.'],
   ['Dedicated pH-control view showing PV/SV, Pump 4 circulation controls, dosing status, and the modified treatment loop.', 'Tampilan khusus kontrol pH yang menunjukkan PV/SV, kontrol sirkulasi Pompa 4, status dosing, dan loop pengolahan hasil modifikasi.'],
   ['Auxiliary control panel', 'Panel kontrol bantu'],
   ['Electrical Wiring & Control', 'Wiring & Kontrol Elektrikal'],
@@ -611,7 +611,7 @@ function initializeImageLightbox() {
     const maxY = Math.max(0, (lightboxImage.offsetHeight * scale - stage.clientHeight) / 2);
     panX = clamp(panX, -maxX, maxX);
     panY = clamp(panY, -maxY, maxY);
-    lightboxImage.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+    lightboxImage.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${scale})`;
     lightboxImage.classList.toggle('is-zoomed', scale > 1);
     lightboxImage.classList.toggle('is-dragging', dragging);
     if (zoomResetButton) zoomResetButton.textContent = `${Math.round(scale * 100)}%`;
@@ -680,7 +680,7 @@ function initializeImageLightbox() {
   }, { passive: false });
   lightboxImage.addEventListener('dblclick', event => {
     event.preventDefault();
-    setZoom(scale === 1 ? 2.5 : 1);
+    setZoom(scale === 1 ? 2 : 1);
   });
   lightboxImage.addEventListener('pointerdown', event => {
     pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });

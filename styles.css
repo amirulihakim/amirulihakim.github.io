@@ -1098,7 +1098,7 @@ h3 { font-size: 1.45rem; }
 .wtp-architecture-heading h2 { white-space:nowrap; }
 .wtp-architecture-layout { grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr); align-items:start; }
 .wtp-architecture-layout .wtp-dark-callouts { height:100%; margin:0; align-content:space-between; }
-.wtp-plc-grid { display:grid; grid-template-columns:minmax(310px,.42fr) minmax(0,.58fr); gap:28px 36px; align-items:start; }
+.wtp-plc-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 36px; align-items:start; }
 .wtp-plc-copy { min-width:0; }
 .wtp-plc-top { margin-bottom:16px; }
 .wtp-plc-top h2 { margin-bottom:0; }
@@ -1115,8 +1115,8 @@ h3 { font-size: 1.45rem; }
 .wtp-tag-map th { color:#607187; font-size:.57rem; letter-spacing:.05em; text-transform:uppercase; }
 .wtp-tag-map th:nth-child(2),.wtp-tag-map td:nth-child(2) { width:42px; text-align:center; }
 .wtp-tag-map td:first-child { color:#173b5c; font-family:"Consolas","Courier New",monospace; font-weight:700; }
-.wtp-ladder-media { align-self:start; place-items:start center; }
-.wtp-ladder-media img { width:100%; height:auto; max-height:680px; object-fit:contain; }
+.wtp-ladder-media { position:relative; min-height:0; overflow:visible; align-self:stretch; }
+.wtp-ladder-media img { position:absolute; right:0; bottom:0; width:auto; max-width:none; height:100%; max-height:100%; object-fit:contain; object-position:right bottom; }
 .wtp-hmi-item { display:grid; min-width:0; overflow:hidden; align-self:stretch; grid-template-rows:auto 1fr; border:1px solid #a9cce6; border-radius:11px; background:#fff; }
 .wtp-hmi-item .wtp-technical-visual { width:100%; height:clamp(220px,22vw,310px); }
 .wtp-hmi-item .wtp-technical-visual img { width:100%; height:100%; max-height:none; object-fit:contain; }
@@ -1165,6 +1165,8 @@ body.lightbox-open { overflow:hidden; }
   .wtp-architecture-layout { grid-template-columns:1fr; }
   .wtp-hmi-pair .wtp-technical-visual,.wtp-result-grid .wtp-technical-visual { aspect-ratio:auto; }
   .wtp-hmi-item .wtp-technical-visual { height:auto; min-height:220px; }
+  .wtp-ladder-media { min-height:0; }
+  .wtp-ladder-media img { position:static; width:100%; max-width:100%; height:auto; max-height:none; }
   .wtp-result-summary { width:min(92%,440px); }
   .image-lightbox { padding:52px 12px 66px; }
   .image-lightbox-stage { inset:50px 8px 62px; }
