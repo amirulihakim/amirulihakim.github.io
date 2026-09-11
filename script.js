@@ -287,6 +287,25 @@ const wtpTextPairs = [
   ['Control logic and operator interface.', 'Logika kontrol dan antarmuka operator.'],
   ['Input handling', 'Penanganan input'],
   ['Physical X inputs and manual M_Man_Sns overrides are combined into normalized M_Sns internal states.', 'Input fisik X dan override manual M_Man_Sns digabungkan menjadi state internal M_Sns yang ternormalisasi.'],
+  ['Process sequencing', 'Urutan proses'],
+  ['Normalized process states generate the internal motor and valve commands used by the control program. M_Sns_2 coordinates Motor 1, Motor 2, and SV2 as one process group, while M_Sns_3 commands Motor 3.', 'State proses yang ternormalisasi menghasilkan perintah internal motor dan katup yang digunakan program kontrol. M_Sns_2 mengoordinasikan Motor 1, Motor 2, dan SV2 sebagai satu kelompok proses, sedangkan M_Sns_3 memerintahkan Motor 3.'],
+  ['Circulation control', 'Kontrol sirkulasi'],
+  ['Pump 4 uses HMI start/stop commands to latch M_Mtr_4. The retained run state passes through the TOR_4 overload permissive before the physical Pompa_On output is energized.', 'Pompa 4 menggunakan perintah start/stop HMI untuk melatch M_Mtr_4. State operasi yang dipertahankan melewati permissive overload TOR_4 sebelum output fisik Pompa_On diaktifkan.'],
+  ['pH dosing control', 'Kontrol dosing pH'],
+  ['The GWQ pH process value is transferred through RS485 / Modbus RTU into D00100, while D00101 stores the pH setpoint. The comparison generates M000022 Dosing_Pump; the automatic path is qualified through the SV4 state and operator dosing-stop command before Y_Dosing is energized.', 'Nilai proses pH GWQ ditransfer melalui RS485 / Modbus RTU ke D00100, sedangkan D00101 menyimpan setpoint pH. Hasil perbandingan menghasilkan M000022 Dosing_Pump; jalur otomatis kemudian dikualifikasi melalui state SV4 dan perintah dosing-stop operator sebelum Y_Dosing diaktifkan.'],
+  ['PLC tag map', 'Peta tag PLC'],
+  ['Tag / area', 'Tag / area'],
+  ['Type', 'Tipe'],
+  ['Function', 'Fungsi'],
+  ['Physical process inputs', 'Input fisik proses'],
+  ['HMI/manual input overrides', 'Override input HMI/manual'],
+  ['Normalized process states', 'State proses ternormalisasi'],
+  ['Internal motor commands/states', 'Perintah/state internal motor'],
+  ['Internal valve / control-mode states', 'State internal katup / mode kontrol'],
+  ['pH process value', 'Nilai proses pH'],
+  ['pH setpoint', 'Setpoint pH'],
+  ['Pump-4 overload permissive', 'Permissive overload Pompa 4'],
+  ['Physical actuator outputs', 'Output fisik aktuator'],
   ['Process states', 'State proses'],
   ['Recovered logic derives internal motor/valve states such as M_Mtr_1â€“3 and M_Sv_2. These are PLC/HMI internal states; direct physical Y mappings for the legacy process were not recovered.', 'Logika yang dipulihkan menghasilkan state internal motor/katup seperti M_Mtr_1â€“3 dan M_Sv_2. Ini merupakan state internal PLC/HMI; pemetaan fisik Y langsung untuk proses lama belum berhasil ditemukan.'],
   ['Circulation', 'Sirkulasi'],
@@ -295,8 +314,10 @@ const wtpTextPairs = [
   ['The GWQ pH value is mapped through RS485 / Modbus into D00100. D00101 stores the pH setpoint. The recovered comparison generates M000022 Dosing_Pump.', 'Nilai pH GWQ dipetakan melalui RS485 / Modbus ke D00100. D00101 menyimpan setpoint pH. Perbandingan yang dipulihkan menghasilkan M000022 Dosing_Pump.'],
   ['Recovered and reconstructed logic; inferred output mappings are distinguished from directly observed program logic.', 'Logika hasil pemulihan dan rekonstruksi; pemetaan output yang diinferensikan dibedakan dari logika program yang diamati secara langsung.'],
   ['Process overview', 'Ikhtisar Proses'],
+  ['Process-status overview with operator controls for the existing WTP stages and coordinated equipment states.', 'Ikhtisar status proses dengan kontrol operator untuk tahapan WTP yang sudah ada dan state peralatan yang terkoordinasi.'],
   ['Legacy WTP process overview showing pump, valve, level, and operating states.', 'Ikhtisar proses WTP lama yang menampilkan state pompa, katup, level, dan operasi.'],
   ['pH control', 'Kontrol pH'],
+  ['Operator interface for pH PV/SV, circulation control, automatic dosing, and dosing-pump status.', 'Antarmuka operator untuk PV/SV pH, kontrol sirkulasi, dosing otomatis, dan status pompa dosing.'],
   ['Dedicated pH-control view showing PV/SV, Pump 4 circulation controls, dosing status, and the modified treatment loop.', 'Tampilan khusus kontrol pH yang menunjukkan PV/SV, kontrol sirkulasi Pompa 4, status dosing, dan loop pengolahan hasil modifikasi.'],
   ['Auxiliary control panel', 'Panel kontrol bantu'],
   ['Electrical Wiring & Control', 'Wiring & Kontrol Elektrikal'],
@@ -503,7 +524,7 @@ function translateTextNodes(lang) {
       : textPairs;
   const map = new Map(activePairs.map(pair => [normalizeText(pair[from]), pair[to]]));
   const stableMap = new Map(activePairs.map(pair => [normalizeText(pair[0]), pair[lang === 'id' ? 1 : 0]]));
-  const selector = 'a, button, h1, h2, h3, p, span, strong, figcaption, small, dt, dd, li';
+  const selector = 'a, button, h1, h2, h3, p, span, strong, figcaption, small, dt, dd, li, th, td';
 
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const value = timahProjectTranslations[lang]?.[element.dataset.i18n]
@@ -566,10 +587,58 @@ document.querySelectorAll('.lang-option').forEach(button => {
 function initializeImageLightbox() {
   const lightbox = document.querySelector('.image-lightbox');
   const lightboxImage = lightbox?.querySelector('img');
+  const stage = lightbox?.querySelector('.image-lightbox-stage');
   const closeButton = lightbox?.querySelector('.image-lightbox-close');
-  if (!lightbox || !lightboxImage || !document.body.classList.contains('wtp-page')) return;
+  const zoomOutButton = lightbox?.querySelector('[data-zoom-out]');
+  const zoomResetButton = lightbox?.querySelector('[data-zoom-reset]');
+  const zoomInButton = lightbox?.querySelector('[data-zoom-in]');
+  if (!lightbox || !lightboxImage || !stage || !document.body.classList.contains('wtp-page')) return;
+
+  const pointers = new Map();
+  let scale = 1;
+  let panX = 0;
+  let panY = 0;
+  let dragging = false;
+  let dragPoint = null;
+  let pinchDistance = 0;
+  let pinchScale = 1;
+
+  const clamp = (value, minimum, maximum) => Math.min(maximum, Math.max(minimum, value));
+  const distance = ([first, second]) => Math.hypot(second.x - first.x, second.y - first.y);
+
+  const renderTransform = () => {
+    const maxX = Math.max(0, (lightboxImage.offsetWidth * scale - stage.clientWidth) / 2);
+    const maxY = Math.max(0, (lightboxImage.offsetHeight * scale - stage.clientHeight) / 2);
+    panX = clamp(panX, -maxX, maxX);
+    panY = clamp(panY, -maxY, maxY);
+    lightboxImage.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+    lightboxImage.classList.toggle('is-zoomed', scale > 1);
+    lightboxImage.classList.toggle('is-dragging', dragging);
+    if (zoomResetButton) zoomResetButton.textContent = `${Math.round(scale * 100)}%`;
+  };
+
+  const resetTransform = () => {
+    scale = 1;
+    panX = 0;
+    panY = 0;
+    dragging = false;
+    dragPoint = null;
+    pinchDistance = 0;
+    pointers.clear();
+    renderTransform();
+  };
+
+  const setZoom = value => {
+    scale = clamp(value, 1, 5);
+    if (scale === 1) {
+      panX = 0;
+      panY = 0;
+    }
+    renderTransform();
+  };
 
   const open = (source, alt = '') => {
+    resetTransform();
     lightboxImage.src = new URL(source, document.baseURI).href;
     lightboxImage.alt = alt;
     lightbox.classList.add('is-open');
@@ -579,6 +648,7 @@ function initializeImageLightbox() {
   };
 
   const close = () => {
+    resetTransform();
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('lightbox-open');
@@ -601,9 +671,61 @@ function initializeImageLightbox() {
   document.querySelectorAll('[data-lightbox-src]').forEach(trigger => {
     trigger.addEventListener('click', () => open(trigger.dataset.lightboxSrc, 'Field installation work at the Water Treatment Plant'));
   });
+  zoomOutButton?.addEventListener('click', () => setZoom(scale - .5));
+  zoomResetButton?.addEventListener('click', resetTransform);
+  zoomInButton?.addEventListener('click', () => setZoom(scale + .5));
+  stage.addEventListener('wheel', event => {
+    event.preventDefault();
+    setZoom(scale + (event.deltaY < 0 ? .25 : -.25));
+  }, { passive: false });
+  lightboxImage.addEventListener('dblclick', event => {
+    event.preventDefault();
+    setZoom(scale === 1 ? 2.5 : 1);
+  });
+  lightboxImage.addEventListener('pointerdown', event => {
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    lightboxImage.setPointerCapture(event.pointerId);
+    if (pointers.size === 2) {
+      pinchDistance = distance([...pointers.values()]);
+      pinchScale = scale;
+      dragging = false;
+    } else if (scale > 1) {
+      dragging = true;
+      dragPoint = { x: event.clientX, y: event.clientY };
+    }
+    renderTransform();
+  });
+  lightboxImage.addEventListener('pointermove', event => {
+    if (!pointers.has(event.pointerId)) return;
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size === 2 && pinchDistance > 0) {
+      setZoom(pinchScale * distance([...pointers.values()]) / pinchDistance);
+      return;
+    }
+    if (!dragging || !dragPoint || scale === 1) return;
+    panX += event.clientX - dragPoint.x;
+    panY += event.clientY - dragPoint.y;
+    dragPoint = { x: event.clientX, y: event.clientY };
+    renderTransform();
+  });
+  const endPointer = event => {
+    pointers.delete(event.pointerId);
+    if (pointers.size === 1 && scale > 1) {
+      const point = [...pointers.values()][0];
+      dragging = true;
+      dragPoint = { ...point };
+    } else {
+      dragging = false;
+      dragPoint = null;
+    }
+    if (pointers.size < 2) pinchDistance = 0;
+    renderTransform();
+  };
+  lightboxImage.addEventListener('pointerup', endPointer);
+  lightboxImage.addEventListener('pointercancel', endPointer);
   closeButton?.addEventListener('click', close);
   lightbox.addEventListener('click', event => {
-    if (event.target === lightbox) close();
+    if (event.target === lightbox || event.target === stage) close();
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && lightbox.classList.contains('is-open')) close();
