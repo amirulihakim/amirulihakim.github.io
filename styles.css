@@ -915,11 +915,9 @@ h3 { font-size: 1.45rem; }
 .thesis-best-result span { padding:13px; color:#b8cadb; font-size:.68rem; border:1px solid #315577; border-radius:8px; background:#0d2948; }
 .thesis-best-result b { display:block; margin-bottom:4px; color:#fff; font-size:1.2rem; }
 .thesis-best-result > p:last-child { max-width:780px; margin-bottom:0; color:#b8cadb; }
-.thesis-evidence-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.thesis-evidence-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
 .thesis-evidence-photo img { object-fit:cover; object-position:center 48%; }
-.thesis-process-video { width:min(100%,900px); margin:20px auto 0; overflow:hidden; border:1px solid #294765; border-radius:12px; background:#08172a; }
 .thesis-process-video video { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; background:#030b15; }
-.thesis-process-video figcaption { padding:13px 15px; color:#aabed0; font-size:.72rem; line-height:1.5; }
 .thesis-takeaway > p { max-width:920px; line-height:1.65; }
 .thesis-future-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:22px; }
 .thesis-future-grid span { padding:13px; color:#29405a; font-size:.72rem; font-weight:750; text-align:center; border:1px solid #d2e0ea; border-radius:8px; background:#edf4f8; }
