@@ -359,6 +359,10 @@ const wtpTextPairs = [
 ];
 
 const thesisTextPairs = [
+  ['Thermal measurement during machining', 'Pengukuran termal saat pemesinan'],
+  ['Thermal camera observation of the micro-milling setup.', 'Pengamatan kamera termal pada setup micro-milling.'],
+  ['Laboratory machining setup', 'Setup pemesinan laboratorium'],
+  ['CNC machine and control workstation used for the experiments.', 'Mesin CNC dan workstation kontrol yang digunakan untuk eksperimen.'],
   ['Micro-Milling Research · Bachelor Thesis', 'Riset Micro-Milling · Tugas Akhir'],
   ['Experimental study of dimensional accuracy, burr formation, cutting temperature, and chip characteristics in CP Titanium I-Plate micro-milling.', 'Studi eksperimental mengenai akurasi dimensi, pembentukan burr, temperatur pemotongan, dan karakteristik geram pada micro-milling I-Plate berbahan CP Titanium.'],
   ['Research overview', 'Ikhtisar riset'],
