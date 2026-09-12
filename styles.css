@@ -418,14 +418,17 @@ h3 { font-size: 1.45rem; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   gap: 80px;
 }
+.contact-grid > .eyebrow { margin-bottom: 0; }
 
 .contact-section { background: var(--surface); border-top: 1px solid var(--line); }
 .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .contact-links a {
   display: inline-flex;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   align-items: center;
   gap: 14px;
   font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -601,6 +604,7 @@ h3 { font-size: 1.45rem; }
     object-position: center;
   }
   .hero-grid, .section-heading, .contact-grid, .project-hero-grid, .case-study { grid-template-columns: 1fr; gap: 36px; }
+  .contact-grid { gap: 18px; }
   .section-heading > p { justify-self: start; }
   .timeline-item { grid-template-columns: 1fr; gap: 20px; }
   .project-grid { grid-template-columns: 1fr; }
