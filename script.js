@@ -546,6 +546,15 @@ function translateTextNodes(lang) {
       element.textContent = map.get(key);
     }
   });
+
+  document.querySelectorAll('[data-energy-en][data-energy-id]').forEach(element => {
+    const value = lang === 'id' ? element.dataset.energyId : element.dataset.energyEn;
+    if (element.dataset.energyAttribute) element.setAttribute(element.dataset.energyAttribute, value);
+    else element.textContent = value;
+    if (element.matches('img[role="button"]')) {
+      element.setAttribute('aria-label', `${lang === 'id' ? 'Perbesar gambar' : 'Enlarge image'}: ${element.alt}`);
+    }
+  });
 }
 
 function translateFocusList(lang) {
@@ -596,7 +605,7 @@ function initializeImageLightbox() {
   const zoomOutButton = lightbox?.querySelector('[data-zoom-out]');
   const zoomResetButton = lightbox?.querySelector('[data-zoom-reset]');
   const zoomInButton = lightbox?.querySelector('[data-zoom-in]');
-  if (!lightbox || !lightboxImage || !stage || !document.body.classList.contains('wtp-page')) return;
+  if (!lightbox || !lightboxImage || !stage || !document.body.matches('.wtp-page, .energy-page')) return;
 
   const pointers = new Map();
   let scale = 1;
@@ -659,10 +668,10 @@ function initializeImageLightbox() {
     lightboxImage.removeAttribute('src');
   };
 
-  document.querySelectorAll('.wtp-page main img').forEach(image => {
+  document.querySelectorAll('.wtp-page main img, .energy-page main img').forEach(image => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
-    image.setAttribute('aria-label', `Enlarge image: ${image.alt}`);
+    image.setAttribute('aria-label', `${document.body.classList.contains('energy-page') && document.documentElement.lang === 'id' ? 'Perbesar gambar' : 'Enlarge image'}: ${image.alt}`);
     image.addEventListener('click', () => open(image.currentSrc || image.src, image.alt));
     image.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
