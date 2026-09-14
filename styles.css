@@ -890,7 +890,7 @@ h3 { font-size: 1.45rem; }
 .thesis-equation-grid span { color:#63c5ed; font-size:.63rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
 .thesis-equation-grid strong { margin-top:13px; color:#fff; font-family:Georgia,"Times New Roman",serif; font-size:clamp(.95rem,1.5vw,1.25rem); font-weight:500; text-align:center; }
 .thesis-journal-page .timah-overview-flow { grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr; }
-.thesis-journal-page .thesis-measure-media-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.thesis-journal-page .thesis-measure-media-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .thesis-journal-page .thesis-measure-media-grid figcaption strong,
 .thesis-journal-page .thesis-measure-media-grid figcaption span { display:block; }
 .thesis-journal-page .thesis-equation-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -904,6 +904,7 @@ h3 { font-size: 1.45rem; }
 .thesis-journal-page .thesis-journal-stats > div { grid-template-columns:repeat(4,minmax(0,1fr)); margin:0; }
 .thesis-journal-page .thesis-transfer-evidence { grid-column:1/-1; padding-top:18px; border-top:1px solid var(--line); }
 @media (max-width:960px) {
+  .thesis-journal-page .thesis-measure-media-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .thesis-journal-page .timah-overview-flow { grid-template-columns:1fr; gap:0; }
   .thesis-journal-page .timah-overview-flow i { width:1px; height:18px; margin:0 auto; }
   .thesis-journal-page .timah-overview-flow i::after { right:-3px; top:11px; transform:rotate(135deg); }
