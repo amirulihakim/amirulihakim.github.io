@@ -902,13 +902,40 @@ h3 { font-size: 1.45rem; }
 .thesis-result-copy p:last-child { margin-bottom:0; }
 .thesis-result-headline { display:block; margin:5px 0 13px; color:var(--thesis-navy); font-size:clamp(1.75rem,3.1vw,2.8rem); letter-spacing:-.04em; }
 .thesis-secondary-stat { display:inline-block; margin:-4px 0 11px; padding:5px 8px; color:#1268c4; font-size:.7rem; font-weight:850; border-radius:5px; background:#e8f2fa; }
-.thesis-chart { min-height:280px; }
-.thesis-chart svg { display:block; width:100%; height:auto; overflow:visible; }
-.thesis-chart text { fill:#6b7b8c; font-family:Inter,"Segoe UI",Arial,sans-serif; font-size:10px; }
+.thesis-chart { min-width:0; container-type:inline-size; }
+.thesis-chart .chart-figure { margin:0; }
+.thesis-chart .chart-panels { display:grid; grid-template-columns:minmax(0,1fr); gap:20px; }
+.thesis-chart .chart-panel { min-width:0; }
+.thesis-chart .chart-panel h4 { min-height:2.8em; margin:0 0 6px; color:#173b5c; font-size:.75rem; line-height:1.4; letter-spacing:.035em; text-transform:uppercase; }
+.thesis-chart .chart-viewport { position:relative; height:310px; width:100%; background:#fff; }
+.thesis-chart svg { display:block; width:100%; height:310px; }
+.thesis-chart text { fill:#566574; font-family:inherit; font-size:11px; }
+.thesis-chart .chart-panel-label { fill:#171717; font-size:13px; font-weight:700; }
+.thesis-chart .chart-axis-label { fill:#344a61; }
 .thesis-chart .chart-gridline { stroke:#dde5eb; stroke-width:1; }
 .thesis-chart .chart-axis { stroke:#9aacb9; stroke-width:1; }
-.thesis-chart .chart-line { fill:none; stroke-width:2.4; stroke-linejoin:round; stroke-linecap:round; }
-.thesis-chart .chart-point { stroke:#fff; stroke-width:1.5; }
+.thesis-chart .chart-zero { stroke:#344a61; stroke-width:1.8; }
+.thesis-chart .chart-line { fill:none; stroke-width:1.2; stroke-linejoin:round; pointer-events:none; }
+.thesis-chart .chart-glyph { stroke-width:1; vector-effect:non-scaling-stroke; }
+.thesis-chart .chart-hit { fill:transparent; }
+.thesis-chart .chart-mark { cursor:crosshair; outline:none; }
+.thesis-chart .chart-mark:focus .chart-glyph,.thesis-chart .chart-mark.is-active .chart-glyph { stroke:#071a38; stroke-width:2.5; }
+.thesis-chart .chart-legend { display:flex; flex-wrap:wrap; align-content:start; align-items:center; gap:6px 12px; min-height:38px; }
+.thesis-chart .chart-legend-item { display:inline-flex; align-items:center; gap:5px; padding:3px 0; color:#344a61; font:inherit; font-size:.72rem; background:none; border:0; }
+.thesis-chart button.chart-legend-item { cursor:pointer; padding:5px; border:1px solid transparent; }
+.thesis-chart button.chart-legend-item:focus-visible { outline:2px solid var(--thesis-blue); outline-offset:1px; }
+.thesis-chart .chart-legend-item[aria-pressed="false"] { opacity:.5; text-decoration:line-through; }
+.thesis-chart .chart-swatch { display:inline-block; width:12px; height:3px; background:var(--series-color); }
+.thesis-chart .chart-legend-hint { margin:0 0 8px; font-size:.7rem; }
+.thesis-chart .chart-figure > figcaption { margin-top:12px; color:#667589; font-size:.75rem; line-height:1.5; }
+.thesis-chart .chart-tooltip { position:absolute; z-index:3; display:grid; gap:2px; max-width:calc(100% - 16px); padding:8px 10px; color:#fff; background:#071a38; border:1px solid #315577; border-radius:5px; font-size:.75rem; line-height:1.4; pointer-events:none; }
+.thesis-chart .chart-tooltip[hidden] { display:none; }
+.thesis-chart .chart-tooltip span:last-child { font-weight:750; }
+@media (min-width:961px) {
+  @container (min-width:640px) {
+    .thesis-chart .chart-panels:not(.chart-panels-single) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+}
 .thesis-best-result { padding:25px; color:#fff; border:1px solid #315577; border-radius:13px; background:var(--thesis-navy); }
 .thesis-best-result > strong { display:block; font-size:clamp(2rem,4vw,3.5rem); }
 .thesis-best-result > div { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
@@ -939,8 +966,6 @@ h3 { font-size: 1.45rem; }
   .thesis-parameter-grid,.thesis-equation-grid,.thesis-evidence-grid,.thesis-best-result > div,.thesis-future-grid,.thesis-measure-media-grid { grid-template-columns:1fr; }
   .thesis-measure-grid { grid-template-columns:1fr; }
   .thesis-result-card { padding:17px; }
-  .thesis-chart { min-height:220px; overflow-x:auto; }
-  .thesis-chart svg { min-width:520px; }
   .thesis-concept { grid-template-columns:1fr; }
   .thesis-concept i { transform:rotate(90deg); }
 }
