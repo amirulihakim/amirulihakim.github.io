@@ -16,7 +16,6 @@
     v: { name: ['ΔV','ΔV'], color: '#cf5b66', shape: 'diamond', values: [0.15,-0.06,0.05,0.14,-0.06,0.04,0.23,-0.06,-0.04] },
     cr: { name: ['ΔCr','ΔCr'], color: '#071a38', shape: 'circle', values: [-0.01,0.01,0.04,-0.02,0.11,0.05,-0.05,0.04,0.05] },
     pd: { name: ['ΔPd','ΔPd'], color: '#2f9e72', shape: 'triangle', values: [0.04,0.03,0.03,0.02,0.02,0.02,0.02,0.03,0.01] },
-    temperature: { name: ['Contact Temperature','Temperatur Kontak'], color: '#d9912b', shape: 'circle', values: [33.4,35.8,42.5,43.6,48.3,49.5,45.5,51.2,65.3] },
   };
   const configs = {
     accuracy: {
@@ -36,10 +35,6 @@
     composition: {
       caption: ['Fig. 5. Change in elemental composition relative to the raw-material baseline.','Gbr. 5. Perubahan komposisi unsur terhadap baseline bahan awal.'],
       panels: [{ label: '', title: ['Change in Elemental Composition','Perubahan Komposisi Unsur'], keys: ['ti','fe','al','v','cr','pd'], type: 'line', unit: 'pp', min: -4, max: 4, step: 1, axis: ['Change in Elemental Composition','Perubahan Komposisi Unsur'], kind: 'composition', toggle: true }],
-    },
-    temperature: {
-      caption: ['Supplemental contact-temperature measurements, 10–90 mm/min.','Pengukuran tambahan temperatur kontak, 10–90 mm/min.'],
-      panels: [{ label: '', title: ['Contact Temperature','Temperatur Kontak'], keys: ['temperature'], type: 'line', unit: '°C', min: 30, max: 70, step: 10, axis: ['Contact Temperature (°C)','Temperatur Kontak (°C)'], kind: 'temperature' }],
     },
   };
   const roots = [...document.querySelectorAll('.thesis-chart[data-chart]')].filter(root => configs[root.dataset.chart]);

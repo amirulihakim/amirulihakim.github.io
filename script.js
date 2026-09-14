@@ -73,7 +73,7 @@ const textPairs = [
   ['CP Titanium Micro-Milling Thesis', 'Tesis Micro-Milling CP Titanium'],
   ['Centralized acquisition of industrial flow measurements for real-time and historical monitoring through an engineering dashboard.', 'Akuisisi terpusat untuk pengukuran aliran industri serta pemantauan real-time dan historis melalui dashboard engineering.'],
   ['Industrial WTP control-system implementation integrating pH/TDS instrumentation, circulation, soda-ash dosing, and PLC/HMI supervision.', 'Implementasi sistem kontrol WTP industri yang mengintegrasikan instrumentasi pH/TDS, sirkulasi, dosing soda ash, dan supervisi PLC/HMI.'],
-  ['Feed-rate investigation in micro-milling a CP Titanium I-Plate implant, focused on dimensional accuracy and burr formation.', 'Investigasi feed rate pada proses micro-milling implan I-Plate berbahan CP Titanium, dengan fokus pada akurasi dimensi dan pembentukan burr.'],
+  ["Experimental micro-milling study on CP Titanium I-Plate geometry, evaluating dimensional accuracy, burr formation, and machining-induced surface compositional change.", "Studi eksperimental micro-milling pada geometri I-Plate CP Titanium, mengevaluasi akurasi dimensi, pembentukan burr, dan perubahan komposisi permukaan akibat pemesinan."],
   ['Each project is presented as an engineering case study: problem, decisions, implementation, and validation.', 'Setiap proyek disajikan sebagai studi kasus engineering: masalah, keputusan, implementasi, dan validasi.'],
   ['All', 'Semua'],
   ['Industrial Systems', 'Sistem Industri'],
@@ -149,7 +149,6 @@ const textPairs = [
   ['The live demo uses synthetic telemetry and is not connected to PT Timah Industri infrastructure.', 'Demo publik menggunakan telemetri sintetis dan tidak terhubung dengan infrastruktur PT Timah Industri.'],
   ['Research · Manufacturing', 'Riset · Manufaktur'],
   ['Feed-Rate Optimization in CP Titanium Micro-Milling', 'Optimasi Feed Rate pada Micro-Milling CP Titanium'],
-  ['Experimental study of dimensional accuracy, burr formation, cutting temperature, and chip characteristics in a CP Titanium I-Plate geometry.', 'Studi eksperimen akurasi dimensi, pembentukan burr, temperatur pemotongan, dan karakteristik geram pada geometri I-Plate CP Titanium.'],
   ['Mechanical Design', 'Desain Mekanik'],
   ['Modular Roller Conveyor', 'Roller Conveyor Modular'],
   ['Assembly modeling and production documentation for straight, curved, roller, frame, and connection systems.', 'Pemodelan assembly dan dokumentasi produksi untuk sistem straight, curved, roller, frame, dan koneksi.'],
@@ -359,29 +358,11 @@ const wtpTextPairs = [
 ];
 
 const thesisTextPairs = [
-  ['Thermal measurement during machining', 'Pengukuran termal saat pemesinan'],
-  ['Thermal camera observation of the micro-milling setup.', 'Pengamatan kamera termal pada setup micro-milling.'],
-  ['Laboratory machining setup', 'Setup pemesinan laboratorium'],
-  ['CNC machine and control workstation used for the experiments.', 'Mesin CNC dan workstation kontrol yang digunakan untuk eksperimen.'],
   ['Micro-Milling Research · Bachelor Thesis', 'Riset Micro-Milling · Tugas Akhir'],
-  ['Experimental study of dimensional accuracy, burr formation, cutting temperature, and chip characteristics in CP Titanium I-Plate micro-milling.', 'Studi eksperimental mengenai akurasi dimensi, pembentukan burr, temperatur pemotongan, dan karakteristik geram pada micro-milling I-Plate berbahan CP Titanium.'],
   ['Research overview', 'Ikhtisar riset'],
   ['Experimental study', 'Studi eksperimental'],
-  ['I-Plate Geometry Design', 'Desain Geometri I-Plate'],
-  ['Nominal geometry, manufacturing dimensions, and tool-access constraints defined.', 'Geometri nominal, dimensi manufaktur, dan batasan akses pahat ditetapkan.'],
-  ['Micro-Milling Experiment', 'Eksperimen Micro-Milling'],
-  ['CP Titanium specimens machined across controlled feed-rate conditions.', 'Spesimen CP Titanium dimesin pada kondisi feed rate yang terkontrol.'],
-  ['Dimensional, Burr & Thermal Analysis', 'Analisis Dimensi, Burr & Termal'],
-  ['Geometric accuracy, burr formation, and cutting temperature evaluated.', 'Akurasi geometri, pembentukan burr, dan temperatur pemotongan dievaluasi.'],
   ['Engineering Questions', 'Pertanyaan Teknik'],
-  ['Why does feed rate matter at the microscale?', 'Mengapa feed rate penting pada skala mikro?'],
-  ['Background', 'Latar Belakang'],
-  ['CP Titanium combines high ductility with low thermal conductivity. At micro-scale cutting conditions, these characteristics make dimensional control and burr formation particularly sensitive to the relationship between feed per tooth and the cutting-edge scale.', 'CP Titanium memiliki keuletan tinggi dan konduktivitas termal rendah. Pada kondisi pemotongan skala mikro, karakteristik ini membuat kontrol dimensi dan pembentukan burr sangat sensitif terhadap hubungan antara feed per tooth dan skala mata potong.'],
-  ['Aim', 'Tujuan'],
-  ['The study varied feed rate from 10 to 100 mm/min while holding spindle speed, depth of cut, tool geometry, and dry-cutting conditions constant. The objective was to observe how increasing feed changed dimensional accuracy, burr height, contact temperature, and chip formation.', 'Penelitian memvariasikan feed rate dari 10 hingga 100 mm/min dengan mempertahankan spindle speed, depth of cut, geometri pahat, dan kondisi dry cutting tetap konstan. Tujuannya adalah mengamati pengaruh peningkatan feed terhadap akurasi dimensi, tinggi burr, temperatur kontak, dan pembentukan geram.'],
-  ['Result', 'Hasil'],
-  ['Higher feed rates produced progressively better dimensional accuracy and lower burr height within the investigated range. The strongest tested condition was 100 mm/min, reaching 99.4% mean dimensional accuracy and 38.2 µm mean burr height, while the maximum measured contact temperature occurred at 90 mm/min.', 'Feed rate yang lebih tinggi menghasilkan peningkatan akurasi dimensi dan penurunan tinggi burr secara bertahap dalam rentang penelitian. Kondisi pengujian terbaik adalah 100 mm/min dengan akurasi dimensi rata-rata 99,4% dan tinggi burr rata-rata 38,2 µm, sedangkan temperatur kontak maksimum terukur terjadi pada 90 mm/min.'],
-  ['Micro-milling experiment with in-process thermal monitoring.', 'Eksperimen micro-milling dengan monitoring termal selama proses.']
+  ['Why does feed rate matter at the microscale?', 'Mengapa feed rate penting pada skala mikro?']
 ];
 
 const focusItems = {
