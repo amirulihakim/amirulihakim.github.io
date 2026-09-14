@@ -890,9 +890,9 @@ h3 { font-size: 1.45rem; }
 .thesis-equation-grid span { color:#63c5ed; font-size:.63rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
 .thesis-equation-grid strong { margin-top:13px; color:#fff; font-family:Georgia,"Times New Roman",serif; font-size:clamp(.95rem,1.5vw,1.25rem); font-weight:500; text-align:center; }
 .thesis-journal-page .timah-overview-flow { grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr; }
-.thesis-journal-page .thesis-composition-media { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.thesis-journal-page .thesis-composition-media figcaption strong,
-.thesis-journal-page .thesis-composition-media figcaption span { display:block; }
+.thesis-journal-page .thesis-measure-media-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.thesis-journal-page .thesis-measure-media-grid figcaption strong,
+.thesis-journal-page .thesis-measure-media-grid figcaption span { display:block; }
 .thesis-journal-page .thesis-equation-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .thesis-journal-page .thesis-math { line-height:1.8; font-size:clamp(.85rem,1.35vw,1.15rem); }
 .thesis-journal-page .thesis-math sub { font-size:.65em; }
@@ -910,7 +910,7 @@ h3 { font-size: 1.45rem; }
   .thesis-journal-page .thesis-journal-stats > div { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:700px) {
-  .thesis-journal-page .thesis-composition-media,
+  .thesis-journal-page .thesis-measure-media-grid,
   .thesis-journal-page .thesis-equation-grid,
   .thesis-journal-page .thesis-journal-stats > div { grid-template-columns:1fr; }
 }
@@ -968,8 +968,6 @@ h3 { font-size: 1.45rem; }
 .thesis-best-result b { display:block; margin-bottom:4px; color:#fff; font-size:1.2rem; }
 .thesis-best-result > p:last-child { max-width:780px; margin-bottom:0; color:#b8cadb; }
 .thesis-evidence-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-.thesis-evidence-photo img { object-fit:cover; object-position:center 48%; }
-.thesis-process-video video { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; background:#030b15; }
 .thesis-takeaway > p { max-width:920px; line-height:1.65; }
 .thesis-future-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:22px; }
 .thesis-future-grid span { padding:13px; color:#29405a; font-size:.72rem; font-weight:750; text-align:center; border:1px solid #d2e0ea; border-radius:8px; background:#edf4f8; }
