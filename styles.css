@@ -668,6 +668,12 @@ h3 { font-size: 1.45rem; }
 [lang="id"] .timah-hero h1 span { white-space: normal; }
 .timah-lead { max-width: 650px; margin: 0; color: #d9e5f0; font-size: clamp(.92rem, 1.35vw, 1.08rem); }
 .timah-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.timah-disclosure-control { padding-bottom:32px; text-align:center; }
+.timah-disclosure-toggle { max-width:100%; white-space:normal; color:var(--timah-blue); border:1px solid var(--timah-blue); background:transparent; }
+.timah-disclosure-toggle:hover { background:#eaf1f8; }
+.timah-disclosure-toggle:focus-visible { outline:2px solid var(--timah-blue); outline-offset:4px; }
+#technical-case-study[hidden] { display:none; }
+#project-overview > .timah-system-overview:last-child { margin:32px auto 0; }
 .timah-button-primary { gap: 10px; color: #fff; background: var(--timah-blue); }
 .timah-button-primary:hover { background: #2587df; }
 .timah-button-ghost { gap: 10px; color: #fff; border: 1px solid rgba(255,255,255,.35); }

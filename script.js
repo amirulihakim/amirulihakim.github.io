@@ -391,6 +391,8 @@ const timahProjectTranslations = {
     'hero.title1': 'Centralized Data Acquisition', 'hero.title2': 'and Monitoring System',
     'hero.abstract': 'Centralized acquisition and browser-based monitoring of distributed industrial flowmeter measurements for real-time visibility and historical review.',
     'hero.dashboardCta': 'Launch Live Dashboard',
+    'technical.expand': 'Explore the full technical case study ↓',
+    'technical.collapse': 'Collapse technical details ↑',
     'overview.label': 'System overview', 'overview.context': 'Internship project', 'overview.field': 'Field Instruments',
     'overview.fieldDesc': 'Local industrial sensors and process measurements.', 'overview.database': 'Centralized Database',
     'overview.databaseDesc': 'Consolidated storage of timestamped monitoring data.', 'overview.dashboard': 'Monitoring Dashboard',
@@ -438,6 +440,8 @@ const timahProjectTranslations = {
     'hero.title1': 'Sistem Akuisisi dan', 'hero.title2': 'Pemantauan Data Terpusat',
     'hero.abstract': 'Akuisisi terpusat dan pemantauan berbasis peramban untuk pengukuran flowmeter industri yang tersebar, mendukung visibilitas waktu nyata dan peninjauan historis.',
     'hero.dashboardCta': 'Buka Dashboard Live',
+    'technical.expand': 'Jelajahi studi kasus teknis lengkap ↓',
+    'technical.collapse': 'Tutup detail teknis ↑',
     'overview.label': 'Ikhtisar Sistem', 'overview.context': 'Proyek magang', 'overview.field': 'Instrumen Lapangan',
     'overview.fieldDesc': 'Sensor industri lokal dan pengukuran proses.', 'overview.database': 'Basis Data Terpusat',
     'overview.databaseDesc': 'Penyimpanan terintegrasi untuk data pemantauan bertanda waktu.', 'overview.dashboard': 'Dasbor Pemantauan',
@@ -579,6 +583,30 @@ setLanguage(localStorage.getItem('portfolio-language') || 'en');
 document.querySelectorAll('.lang-option').forEach(button => {
   button.addEventListener('click', () => setLanguage(button.dataset.lang));
 });
+
+function initializeTechnicalDisclosure() {
+  const button = document.getElementById('technical-case-study-toggle');
+  const content = document.getElementById('technical-case-study');
+  if (!button || !content) return;
+
+  button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') !== 'true';
+    content.hidden = !expanded;
+    button.setAttribute('aria-expanded', String(expanded));
+    button.dataset.i18n = expanded ? 'technical.collapse' : 'technical.expand';
+    const lang = document.documentElement.lang === 'id' ? 'id' : 'en';
+    button.textContent = timahProjectTranslations[lang][button.dataset.i18n];
+    if (!expanded) {
+      button.focus({ preventScroll: true });
+      const bounds = button.getBoundingClientRect();
+      if (bounds.top < 0 || bounds.bottom > window.innerHeight) {
+        button.scrollIntoView({ block: 'center', behavior: 'instant' });
+      }
+    }
+  });
+}
+
+initializeTechnicalDisclosure();
 
 function initializeImageLightbox() {
   const lightbox = document.querySelector('.image-lightbox');
