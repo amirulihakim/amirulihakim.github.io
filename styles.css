@@ -673,7 +673,25 @@ h3 { font-size: 1.45rem; }
 .timah-disclosure-toggle:hover { background:#eaf1f8; }
 .timah-disclosure-toggle:focus-visible { outline:2px solid var(--timah-blue); outline-offset:4px; }
 #technical-case-study[hidden] { display:none; }
-#project-overview > .timah-system-overview:last-child { margin:32px auto 0; }
+.timah-summary-system { padding-top:36px; }
+.timah-summary-system > .timah-system-overview { margin-bottom:0; }
+#project-overview .timah-challenge-layout { grid-template-columns:minmax(0,62fr) minmax(0,38fr); gap:22px 32px; align-items:stretch; }
+#project-overview .timah-summary-heading { grid-column:1; }
+#project-overview .timah-context-list { grid-column:1; grid-row:2; margin:0; }
+#project-overview .timah-context-list > div { grid-template-columns:7rem minmax(0,1fr); gap:22px; }
+#project-overview .timah-hardware-media { grid-column:2; grid-row:2; display:flex; flex-direction:column; min-width:0; min-height:0; align-self:stretch; }
+#project-overview .timah-hardware-media img { flex:1 1 0; width:100%; height:0; min-height:0; max-height:none; aspect-ratio:auto; object-fit:cover; object-position:center; }
+#project-overview .timah-hardware-media figcaption { flex:none; }
+@media (max-width:960px) {
+  #project-overview .timah-challenge-layout { gap:22px 24px; }
+  #project-overview .timah-context-list > div { grid-template-columns:1fr; gap:4px; }
+}
+@media (max-width:780px) {
+  .timah-summary-system { padding-top:28px; }
+  #project-overview .timah-challenge-layout { grid-template-columns:minmax(0,1fr); gap:22px; }
+  #project-overview .timah-hardware-media { grid-column:1; grid-row:3; }
+  #project-overview .timah-hardware-media img { flex:none; height:auto; aspect-ratio:4/3; }
+}
 .timah-button-primary { gap: 10px; color: #fff; background: var(--timah-blue); }
 .timah-button-primary:hover { background: #2587df; }
 .timah-button-ghost { gap: 10px; color: #fff; border: 1px solid rgba(255,255,255,.35); }
