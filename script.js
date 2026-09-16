@@ -618,9 +618,9 @@ function initializeImageLightbox() {
   const zoomOutButton = lightbox?.querySelector('[data-zoom-out]');
   const zoomResetButton = lightbox?.querySelector('[data-zoom-reset]');
   const zoomInButton = lightbox?.querySelector('[data-zoom-in]');
-  if (!lightbox || !lightboxImage || !stage || !document.body.matches('.wtp-page, .energy-page, .defa-page, .mechanical-page')) return;
+  if (!lightbox || !lightboxImage || !stage || !document.body.matches('.wtp-page, .energy-page, .defa-page, .mechanical-page, .facility-page')) return;
 
-  const defaViewer = document.body.matches('.defa-page, .mechanical-page');
+  const defaViewer = document.body.matches('.defa-page, .mechanical-page, .facility-page');
   let imageTrigger = null;
   const pointers = new Map();
   let scale = 1;
@@ -685,10 +685,10 @@ function initializeImageLightbox() {
     if (defaViewer) { document.querySelector('main').inert = false; document.querySelector('header').inert = false; document.querySelector('footer').inert = false; imageTrigger?.focus({ preventScroll: true }); }
   };
 
-  document.querySelectorAll('.wtp-page main img, .energy-page main img, .defa-page main img, .mechanical-page main img').forEach(image => {
+  document.querySelectorAll('.wtp-page main img, .energy-page main img, .defa-page main img, .mechanical-page main img, .facility-page main img').forEach(image => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
-    image.setAttribute('aria-label', `${document.body.matches('.energy-page, .defa-page, .mechanical-page') && document.documentElement.lang === 'id' ? 'Perbesar gambar' : 'Enlarge image'}: ${image.alt}`);
+    image.setAttribute('aria-label', `${document.body.matches('.energy-page, .defa-page, .mechanical-page, .facility-page') && document.documentElement.lang === 'id' ? 'Perbesar gambar' : 'Enlarge image'}: ${image.alt}`);
     image.addEventListener('click', () => open(image.currentSrc || image.src, image.alt));
     image.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {

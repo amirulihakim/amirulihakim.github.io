@@ -1,0 +1,22 @@
+/* Facility portfolio: shared project layout with readable drawing previews. */
+.facility-page .facility-hero { min-height:0; background-image:linear-gradient(90deg,rgba(3,15,34,.98),rgba(5,24,50,.88) 55%,rgba(6,24,47,.4)),url("assets/projects/facility-design/control-panel-room-section.webp"); background-position:center; }
+.facility-page .facility-hero .timah-lead { max-width:760px; }
+.facility-overview { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; margin:0 0 28px; }
+.facility-overview dt { color:var(--timah-blue); font-size:.78rem; font-weight:800; margin-bottom:8px; }
+.facility-overview dd { margin:0; font-size:.94rem; }
+.facility-work-links { display:flex; flex-wrap:wrap; gap:12px 24px; }
+.facility-work-links a { color:var(--timah-blue); text-underline-offset:4px; font-weight:700; }
+.facility-page .facility-split { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:42px; align-items:center; }
+.facility-split h2 { font-size:clamp(1.8rem,3vw,2.6rem); }
+.facility-detail { color:#667589; font-size:.9rem; }
+.facility-page .facility-media { min-width:0; box-shadow:none; }
+.facility-page .facility-media img { width:100%; height:auto; object-fit:contain; background:white; cursor:zoom-in; }
+.facility-page main img:focus-visible { outline:3px solid var(--timah-blue); outline-offset:-3px; }
+.facility-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.facility-gallery .facility-media { display:flex; flex-direction:column; }
+.facility-gallery .facility-media img { aspect-ratio:4/3; }
+.facility-gallery figcaption { margin-top:auto; }
+.facility-skills { display:flex; flex-wrap:wrap; gap:12px 28px; padding-left:18px; margin-bottom:0; }
+.facility-page section[id] { scroll-margin-top:88px; }
+@media(max-width:960px) { .facility-overview { grid-template-columns:repeat(2,minmax(0,1fr)); } .facility-page .facility-split { grid-template-columns:minmax(0,1fr); gap:24px; } }
+@media(max-width:700px) { .facility-overview,.facility-gallery { grid-template-columns:minmax(0,1fr); } }
