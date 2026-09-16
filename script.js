@@ -618,8 +618,10 @@ function initializeImageLightbox() {
   const zoomOutButton = lightbox?.querySelector('[data-zoom-out]');
   const zoomResetButton = lightbox?.querySelector('[data-zoom-reset]');
   const zoomInButton = lightbox?.querySelector('[data-zoom-in]');
-  if (!lightbox || !lightboxImage || !stage || !document.body.matches('.wtp-page, .energy-page')) return;
+  if (!lightbox || !lightboxImage || !stage || !document.body.matches('.wtp-page, .energy-page, .defa-page')) return;
 
+  const defaViewer = document.body.classList.contains('defa-page');
+  let imageTrigger = null;
   const pointers = new Map();
   let scale = 1;
   let panX = 0;
@@ -664,6 +666,7 @@ function initializeImageLightbox() {
   };
 
   const open = (source, alt = '') => {
+    if (defaViewer) { imageTrigger = document.activeElement; document.querySelector('main').inert = true; document.querySelector('header').inert = true; document.querySelector('footer').inert = true; }
     resetTransform();
     lightboxImage.src = new URL(source, document.baseURI).href;
     lightboxImage.alt = alt;
@@ -679,12 +682,13 @@ function initializeImageLightbox() {
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('lightbox-open');
     lightboxImage.removeAttribute('src');
+    if (defaViewer) { document.querySelector('main').inert = false; document.querySelector('header').inert = false; document.querySelector('footer').inert = false; imageTrigger?.focus({ preventScroll: true }); }
   };
 
-  document.querySelectorAll('.wtp-page main img, .energy-page main img').forEach(image => {
+  document.querySelectorAll('.wtp-page main img, .energy-page main img, .defa-page main img').forEach(image => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
-    image.setAttribute('aria-label', `${document.body.classList.contains('energy-page') && document.documentElement.lang === 'id' ? 'Perbesar gambar' : 'Enlarge image'}: ${image.alt}`);
+    image.setAttribute('aria-label', `${document.body.matches('.energy-page, .defa-page') && document.documentElement.lang === 'id' ? 'Perbesar gambar' : 'Enlarge image'}: ${image.alt}`);
     image.addEventListener('click', () => open(image.currentSrc || image.src, image.alt));
     image.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -755,6 +759,12 @@ function initializeImageLightbox() {
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+    if (defaViewer && event.key === 'Tab' && lightbox.classList.contains('is-open')) {
+      const controls = [...lightbox.querySelectorAll('button')];
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
   });
 }
 

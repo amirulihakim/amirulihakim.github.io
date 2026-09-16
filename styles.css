@@ -1257,3 +1257,47 @@ body.lightbox-open { overflow:hidden; }
   .image-lightbox { padding:52px 12px 66px; }
   .image-lightbox-stage { inset:50px 8px 62px; }
 }
+
+/* Defa manufacturing internship: reuse the shared project foundation. */
+.defa-page .defa-hero { background-image:linear-gradient(90deg,rgba(3,15,34,.97),rgba(5,24,50,.86) 50%,rgba(6,24,47,.3)),url("assets/projects/defa/defa-hero.png"); background-position:center; }
+.defa-hero h1 { max-width:850px; }
+.defa-role { margin:18px 0 0; color:#bbcee3; font-size:.8rem; }
+.defa-summary-copy { max-width:920px; }
+.defa-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:22px; }
+.defa-cards article { padding:20px; border:1px solid #d7e0e9; border-radius:10px; background:#fff; }
+.defa-cards h3 { margin:0 0 10px; color:var(--timah-blue); font-size:.82rem; }
+.defa-cards p { margin:0; color:#4f5d6e; font-size:.9rem; line-height:1.55; }
+.defa-status { display:flex; flex-wrap:wrap; gap:8px 18px; margin:20px 0; padding:14px 18px; border-left:3px solid var(--timah-blue); background:#eaf1f8; color:var(--timah-navy); }
+.defa-status strong { color:var(--timah-blue); }
+.defa-page .defa-media { min-width:0; }
+.defa-page .defa-media img { width:100%; aspect-ratio:16/10; object-fit:contain; object-position:center; background:#f2f5f8; cursor:zoom-in; }
+.defa-page .defa-photo img { object-fit:cover; }
+.defa-page .defa-feature img,.defa-page .defa-cad-top img { aspect-ratio:auto; height:auto; }
+.defa-page .defa-opc { max-width:1000px; margin-inline:auto; }
+.defa-page .defa-opc img { aspect-ratio:auto; height:auto; max-height:850px; background:#fff; }
+.defa-facts { display:flex; flex-wrap:wrap; gap:8px 24px; padding-left:20px; margin:20px 0; }
+.defa-metrics { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; margin:22px 0; }
+.defa-metrics > div { display:flex; flex-direction:column-reverse; justify-content:flex-end; padding:15px; border:1px solid #d7e0e9; border-radius:9px; background:#fff; }
+.defa-metrics dt { color:#4f5d6e; font-size:.78rem; }
+.defa-metrics dd { margin:0 0 5px; color:var(--timah-blue); font-size:1.5rem; font-weight:800; }
+.defa-cad-layout { margin-top:22px; align-items:start; }
+.defa-cad-layout .wtp-dark-callouts { margin:0; }
+.defa-limitations { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px 26px; padding-left:20px; }
+.defa-disclosure { display:flex; justify-content:center; padding-block:24px 32px; list-style:none; cursor:pointer; }
+.defa-disclosure::-webkit-details-marker { display:none; }
+.defa-disclosure .button { gap:12px; padding-block:12px; text-align:center; }
+.defa-disclosure:focus-visible { outline:2px solid var(--timah-blue); outline-offset:-4px; }
+.defa-collapse-label,.defa-case-study[open] .defa-expand-label { display:none; }
+.defa-case-study[open] .defa-collapse-label { display:inline; }
+.defa-case-study[open] .defa-chevron { transform:rotate(180deg); }
+.defa-page main img:focus-visible { outline:3px solid var(--timah-cyan); outline-offset:-3px; }
+.project-visual-defa > img { object-fit:contain; object-position:center; background:#edf2f5; }
+@media (max-width:960px) {
+  .defa-cards,.defa-limitations { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .defa-metrics { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width:700px) {
+  .defa-cards,.defa-limitations,.defa-page .timah-evidence-grid { grid-template-columns:minmax(0,1fr); }
+  .defa-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .defa-page .defa-hero { background-image:linear-gradient(90deg,rgba(3,15,34,.94),rgba(5,24,50,.8)),url("assets/projects/defa/defa-hero.png"); }
+}
