@@ -773,9 +773,15 @@ initializeImageLightbox();
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 // Reveal hidden study targets before native fragment navigation scrolls to them.
-function initializeThesisDisclosure() {
-  const study = document.querySelector('details.thesis-case-study');
+function initializeProjectDisclosure() {
+  const study = document.querySelector('details.thesis-case-study, details.project-details');
   if (!study) return;
+  study.querySelector('[data-project-collapse]')?.addEventListener('click', () => {
+    study.open = false;
+    const summary = study.querySelector('summary');
+    summary.focus({ preventScroll: true });
+    summary.scrollIntoView({ block: 'center', behavior: 'instant' });
+  });
   const revealTarget = hash => {
     let id;
     try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
@@ -795,4 +801,4 @@ function initializeThesisDisclosure() {
   window.addEventListener('hashchange', () => revealTarget(window.location.hash));
   revealTarget(window.location.hash);
 }
-initializeThesisDisclosure();
+initializeProjectDisclosure();

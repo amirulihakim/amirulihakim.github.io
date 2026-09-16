@@ -1321,11 +1321,11 @@ body.lightbox-open { overflow:hidden; }
 }
 
 /* Native technical-study disclosure, matching the portfolio disclosure button. */
-.thesis-disclosure { display:flex; justify-content:center; padding-block:24px 32px; list-style:none; cursor:pointer; }
-.thesis-disclosure::-webkit-details-marker { display:none; }
-.thesis-disclosure-toggle { max-width:100%; white-space:normal; gap:12px; padding-block:12px; text-align:center; color:var(--timah-blue); border:1px solid var(--timah-blue); background:transparent; }
-.thesis-disclosure:hover .thesis-disclosure-toggle { background:#eaf1f8; }
-.thesis-disclosure:focus-visible { outline:2px solid var(--timah-blue); outline-offset:-4px; }
-.thesis-collapse-label, .thesis-case-study[open] .thesis-expand-label { display:none; }
-.thesis-case-study[open] .thesis-collapse-label { display:inline; }
-.thesis-case-study[open] .thesis-chevron { transform:rotate(180deg); }
+.thesis-disclosure, .project-details-summary { display:flex; justify-content:center; padding-block:24px 32px; list-style:none; cursor:pointer; }
+.thesis-disclosure::-webkit-details-marker, .project-details-summary::-webkit-details-marker { display:none; }
+.thesis-disclosure-toggle, .project-details-toggle { max-width:100%; white-space:normal; gap:12px; padding-block:12px; text-align:center; color:var(--timah-blue); border:1px solid var(--timah-blue); background:transparent; }
+.thesis-disclosure:hover .thesis-disclosure-toggle, .project-details-summary:hover .project-details-toggle, button.project-details-toggle:hover { background:#eaf1f8; }
+.thesis-disclosure:focus-visible, .project-details-summary:focus-visible, button.project-details-toggle:focus-visible { outline:2px solid var(--timah-blue); outline-offset:-4px; }
+.thesis-collapse-label, .thesis-case-study[open] .thesis-expand-label, .project-details-collapse, .project-details[open] .project-details-expand { display:none; }
+.thesis-case-study[open] .thesis-collapse-label, .project-details[open] .project-details-collapse { display:inline; }
+.thesis-case-study[open] .thesis-chevron, .project-details[open] .project-details-chevron { transform:rotate(180deg); }
