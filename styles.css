@@ -35,6 +35,8 @@ button, input, textarea { font: inherit; }
 
 .narrow { max-width: 860px; }
 .section { padding: 104px 0; }
+.homepage .section { padding-block: 84px; }
+.homepage .project-topline > span:last-child { white-space: nowrap; }
 .section-muted { background: var(--surface-2); }
 .section-dark { background: var(--dark); color: white; }
 
@@ -596,6 +598,7 @@ h3 { font-size: 1.45rem; }
 
 @media (max-width: 860px) {
   .section { padding: 78px 0; }
+  .homepage .section { padding-block: 64px; }
   .hero {
     height: auto;
     min-height: calc(100svh - 72px);
