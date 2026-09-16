@@ -771,3 +771,28 @@ function initializeImageLightbox() {
 initializeImageLightbox();
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+// Reveal hidden study targets before native fragment navigation scrolls to them.
+function initializeThesisDisclosure() {
+  const study = document.querySelector('details.thesis-case-study');
+  if (!study) return;
+  const revealTarget = hash => {
+    let id;
+    try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target || !study.contains(target)) return;
+    study.open = true;
+    requestAnimationFrame(() => requestAnimationFrame(() => target.scrollIntoView({ block: 'start', behavior: 'instant' })));
+    return true;
+  };
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (!revealTarget(link.hash)) return;
+      event.preventDefault();
+      if (window.location.hash !== link.hash) history.pushState(null, '', link.hash);
+    });
+  });
+  window.addEventListener('hashchange', () => revealTarget(window.location.hash));
+  revealTarget(window.location.hash);
+}
+initializeThesisDisclosure();
