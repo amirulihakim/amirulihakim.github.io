@@ -1,5 +1,5 @@
 /* Facility portfolio: shared project layout with readable drawing previews. */
-.facility-page .facility-hero { min-height:0; background-image:linear-gradient(90deg,rgba(3,15,34,.98),rgba(5,24,50,.88) 55%,rgba(6,24,47,.4)),url("assets/projects/facility-design/control-panel-room-section.webp"); background-position:center; }
+.facility-page .facility-hero { min-height:0; background-image:linear-gradient(90deg,rgba(3,15,34,.82),rgba(5,24,50,.58) 52%,rgba(6,24,47,.14)),url("assets/projects/facility-design/timah-building.webp"); background-position:center 45%; }
 .facility-page .facility-hero .timah-lead { max-width:760px; }
 .facility-overview { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; margin:0 0 28px; }
 .facility-overview dt { color:var(--timah-blue); font-size:.78rem; font-weight:800; margin-bottom:8px; }
@@ -20,3 +20,20 @@
 .facility-page section[id] { scroll-margin-top:88px; }
 @media(max-width:960px) { .facility-overview { grid-template-columns:repeat(2,minmax(0,1fr)); } .facility-page .facility-split { grid-template-columns:minmax(0,1fr); gap:24px; } }
 @media(max-width:700px) { .facility-overview,.facility-gallery { grid-template-columns:minmax(0,1fr); } }
+
+/* Native details use the same border, focus and chevron treatment as project disclosures. */
+.facility-work { border-top:1px solid #d8e1eb; scroll-margin-top:88px; }
+.facility-work:last-child { border-bottom:1px solid #d8e1eb; }
+.facility-work-summary { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 20px; padding:20px 16px; cursor:pointer; list-style:none; }
+.facility-work-summary::-webkit-details-marker { display:none; }
+.facility-work-summary:hover { background:#eaf1f8; }
+.facility-work-summary:focus-visible { outline:2px solid var(--timah-blue); outline-offset:-4px; }
+.facility-work-heading { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; }
+.facility-work-title { font-size:1.2rem; font-weight:800; letter-spacing:-.02em; }
+.facility-work-role { color:var(--timah-blue); font-size:.75rem; font-weight:800; }
+.facility-work-description { grid-column:1; color:#667589; font-size:.9rem; }
+.facility-work-chevron { grid-column:2; grid-row:1 / 3; align-self:center; color:var(--timah-blue); }
+.facility-work[open] .facility-work-chevron { transform:rotate(180deg); }
+.facility-work-content { padding:8px 16px 28px; }
+.facility-work-content > p { max-width:900px; }
+@media(max-width:700px) { .facility-work-summary { padding-inline:8px; } .facility-work-content { padding-inline:8px; } }
