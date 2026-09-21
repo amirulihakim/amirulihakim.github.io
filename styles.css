@@ -1329,3 +1329,73 @@ body.lightbox-open { overflow:hidden; }
 .thesis-collapse-label, .thesis-case-study[open] .thesis-expand-label, .project-details-collapse, .project-details[open] .project-details-expand { display:none; }
 .thesis-case-study[open] .thesis-collapse-label, .project-details[open] .project-details-collapse { display:inline; }
 .thesis-case-study[open] .thesis-chevron, .project-details[open] .project-details-chevron { transform:rotate(180deg); }
+
+/* Robotic arm: reuse the Timah/CP-Ti sections, cards and disclosure. */
+.robot-hero { min-height:0; padding:20px 0 32px; background:#071a38; }
+.robot-hero::before { inset:0; opacity:1; mask-image:none; background:#fff url("assets/projects/robotic-arm/arm-model-1.jpg") right center / auto 100% no-repeat; }
+.robot-hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,#071a38 0%,#071a38 35%,rgba(7,26,56,.98) 43%,rgba(7,26,56,.78) 54%,rgba(7,26,56,.3) 68%,rgba(7,26,56,0) 84%); }
+.robot-hero .container { z-index:1; }
+.robot-hero .timah-back { margin-bottom:16px; }
+.robot-hero .timah-hero-grid { grid-template-columns:minmax(0,46%); align-items:center; }
+.robot-hero .timah-eyebrow { margin-bottom:12px; }
+.robot-hero h1 { margin-bottom:12px; font-size:clamp(2.65rem,3.7vw,4rem); line-height:1.02; }
+.robot-subtitle { margin:0 0 12px; color:#78c9f0; font-weight:700; }
+.robot-hero .timah-lead { font-size:1rem; line-height:1.6; }
+.robot-hero .timah-actions { margin-top:20px; gap:10px; }
+.robot-hero .button { padding:12px 16px; font-size:.8rem; }
+.robot-overview { grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr; padding-top:0; }
+.robot-overview strong { font-size:.85rem; }
+.robot-overview span { font-size:.78rem; line-height:1.55; }
+.robot-system-media img { height:100%; max-height:480px; object-fit:contain; background:#fff; }
+.robot-system-media { display:grid; grid-template-rows:minmax(0,1fr) auto; }
+.robot-architecture-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.robot-architecture-grid h3 { margin:0 0 10px; color:#fff; font-size:1rem; }
+.robot-architecture-grid p { margin:0; font-size:.9rem; }
+.robot-page .thesis-dark h2 { color:#fff; }
+.robot-page .thesis-dark p { color:#b8cadb; }
+.robot-page .thesis-dark .timah-section-label { color:#63c5ed; }
+.robot-joint-grid { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:20px; }
+.robot-joint-grid figure { grid-column:span 2; }
+.robot-joint-grid figure:nth-child(-n+2) { grid-column:span 3; }
+.robot-joint-grid img { aspect-ratio:4/3; object-fit:contain; background:#c5d3e4; }
+.robot-joint-grid h3 { margin:0 0 8px; color:var(--timah-blue); font-size:.84rem; text-transform:uppercase; letter-spacing:.04em; }
+.robot-joint-grid figcaption { font-size:.88rem; }
+.robot-reduction-heading { margin-top:32px; color:var(--timah-navy); }
+.robot-integration-flow { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:24px; padding:0; list-style:none; }
+.robot-integration-flow li { position:relative; padding:18px 10px; text-align:center; border:1px solid #315577; border-radius:10px; background:#0d2948; font-size:.85rem; font-weight:700; }
+.robot-integration-flow li:not(:last-child)::after { content:"→"; position:absolute; left:100%; width:24px; color:#63c5ed; }
+.robot-development-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.robot-development-grid h3 { margin-top:0; color:var(--timah-blue); }
+.robot-development-grid ul { margin-bottom:0; padding-left:20px; color:#4f5d6e; }
+.robot-development-grid li+li { margin-top:7px; }
+.robot-page main img { cursor:zoom-in; }
+.robot-page main img:focus-visible { outline:3px solid var(--timah-cyan); outline-offset:-3px; }
+.robot-page section[id] { scroll-margin-top:90px; }
+.project-visual-robot > img { object-fit:contain; object-position:center; background:#fff; }
+@media (max-width:960px) {
+  .robot-hero .timah-hero-grid { grid-template-columns:minmax(0,58%); }
+  .robot-hero::after { background:linear-gradient(90deg,#071a38 0%,rgba(7,26,56,.98) 45%,rgba(7,26,56,.65) 66%,rgba(7,26,56,.06) 100%); }
+  .robot-overview { grid-template-columns:1fr; gap:0; }
+  .robot-overview i { width:1px; height:18px; margin:0 auto; }
+  .robot-overview i::after { right:-3px; top:11px; transform:rotate(135deg); }
+  .robot-architecture-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .robot-joint-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .robot-joint-grid figure,.robot-joint-grid figure:nth-child(-n+2) { grid-column:auto; }
+  .robot-integration-flow { grid-template-columns:1fr; gap:24px; }
+  .robot-integration-flow li:not(:last-child)::after { content:"↓"; left:calc(50% - 12px); top:100%; height:24px; }
+}
+@media (max-width:700px) {
+  .robot-architecture-grid,.robot-joint-grid,.robot-development-grid { grid-template-columns:minmax(0,1fr); }
+  .robot-hero { padding:16px 0 190px; }
+  .robot-hero::before { background-position:center bottom; background-size:auto 205px; }
+  .robot-hero::after { background:linear-gradient(to bottom,#071a38 0%,#071a38 calc(100% - 205px),rgba(7,26,56,.8) calc(100% - 175px),rgba(7,26,56,.08) calc(100% - 115px),rgba(7,26,56,0) 100%); }
+  .robot-hero .timah-hero-grid { grid-template-columns:1fr; }
+  .robot-hero .timah-back { margin-bottom:12px; }
+  .robot-hero .timah-eyebrow { margin-bottom:10px; font-size:.68rem; }
+  .robot-hero h1 { font-size:clamp(2rem,8.8vw,3rem); }
+  .robot-subtitle { font-size:.87rem; }
+  .robot-hero .timah-lead { font-size:.88rem; line-height:1.5; }
+  .robot-hero .timah-actions { margin-top:16px; gap:8px; }
+  .robot-hero .button { flex:1 1 auto; padding:10px; font-size:.7rem; }
+  .robot-development-grid .timah-role-card { padding:22px; }
+}
