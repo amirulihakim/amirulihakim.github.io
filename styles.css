@@ -1346,8 +1346,7 @@ body.lightbox-open { overflow:hidden; }
 .robot-overview { grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr; padding-top:0; }
 .robot-overview strong { font-size:.85rem; }
 .robot-overview span { font-size:.78rem; line-height:1.55; }
-.robot-system-media img { height:100%; max-height:480px; object-fit:contain; background:#fff; }
-.robot-system-media { display:grid; grid-template-rows:minmax(0,1fr) auto; }
+
 .robot-architecture-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .robot-architecture-grid h3 { margin:0 0 10px; color:#fff; font-size:1rem; }
 .robot-architecture-grid p { margin:0; font-size:.9rem; }
@@ -1398,4 +1397,21 @@ body.lightbox-open { overflow:hidden; }
   .robot-hero .timah-actions { margin-top:16px; gap:8px; }
   .robot-hero .button { flex:1 1 auto; padding:10px; font-size:.7rem; }
   .robot-development-grid .timah-role-card { padding:22px; }
+}
+/* Align the visible robot design copy and rear assembly as one block. */
+.robot-design-section { padding-bottom:24px; }
+.robot-design-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:72px; align-items:start; }
+.robot-design-layout > div { min-width:0; max-width:620px; }
+.robot-design-layout .timah-section-label { margin:0 0 12px; }
+.robot-design-layout h2 { margin:0 0 16px; }
+.robot-design-layout p:not(.timah-section-label) { margin:0 0 14px; }
+.robot-design-layout p:last-child { margin-bottom:0; }
+.robot-design-layout .robot-system-media { display:block; margin:32px 0 0; }
+.robot-design-layout .robot-system-media img { width:100%; height:auto; max-height:none; aspect-ratio:4/3; object-fit:cover; }
+.robot-design-layout figcaption { padding:10px 14px; font-size:.72rem; }
+.robot-design-section + .thesis-case-study > .thesis-disclosure { padding-top:32px; }
+@media (max-width:960px) {
+  .robot-design-layout { grid-template-columns:minmax(0,1fr); gap:24px; }
+  .robot-design-layout .robot-system-media { margin-top:0; }
+  .robot-design-layout .robot-system-media img { aspect-ratio:auto; }
 }
