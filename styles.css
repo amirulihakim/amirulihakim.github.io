@@ -812,20 +812,12 @@ h3 { font-size: 1.45rem; }
 .timah-outcome { display: grid; grid-template-columns: .42fr 1fr; gap: 70px; }
 .timah-outcome > div { max-width: 760px; }
 .timah-outcome p { font-size: 1.05rem; }
-.timah-demo-card { display: grid; grid-template-columns: .82fr 1.18fr; gap: 54px; align-items: center; padding: 48px; overflow: hidden; border: 1px solid #cbe0f1; border-radius: 18px; background: linear-gradient(135deg, #eef8fe, #dceef9); }
-.timah-demo-copy .timah-button-primary { margin-top: 14px; }
-.timah-demo-copy small { display: block; margin-top: 10px; color: #65768a; }
+.timah-demo-layout { display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:32px; align-items:center; }
+.timah-demo-copy .timah-button-primary { margin-top:14px; }
+.timah-demo-video { display:block; width:100%; height:auto; aspect-ratio:16/9; border-radius:12px; }
 .timah-video-media { border-color: #9cbcd4; background: #071a38; box-shadow: 0 20px 44px rgba(7,26,56,.18); }
 .timah-video-media video { max-height: 560px; object-fit: contain; background: #061326; }
 .timah-video-media figcaption { color: #c1d2e2; }
-.timah-demo-slot { min-height: 310px; border-color: #8fb7d4; background: rgba(255,255,255,.55); }
-.timah-demo-slot strong { color: #183556; }
-.timah-demo-preview { position: relative; min-height: 300px; overflow: hidden; border: 1px solid #9cbcd4; border-radius: 12px; background: #071a38; }
-.timah-demo-preview video { display: block; width: 100%; height: 100%; min-height: 300px; aspect-ratio: 16 / 9; object-fit: cover; }
-.timah-demo-placeholder { position: absolute; inset: 0; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; text-align: center; background: linear-gradient(135deg, #eef8fe, #dceef9); }
-.timah-demo-placeholder span { color: var(--timah-blue); font-size: .7rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
-.timah-demo-placeholder strong { margin: 10px 0 5px; color: #183556; }
-.timah-demo-placeholder small { max-width: 390px; color: #65768a; }
 .timah-disclaimer { margin: 20px 12px 0; font-size: .8rem; }
 
 @media (max-width: 960px) {
@@ -834,7 +826,7 @@ h3 { font-size: 1.45rem; }
   .timah-tech-grid { grid-template-columns: repeat(3, 1fr); }
   .timah-tech-grid div:nth-child(3) { border-right: 0; }
   .timah-tech-grid div:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,.12); }
-  .timah-demo-card { grid-template-columns: 1fr; }
+  .timah-demo-layout { grid-template-columns:minmax(0,1fr); gap:24px; }
 }
 
 @media (max-width: 780px) {
@@ -851,7 +843,7 @@ h3 { font-size: 1.45rem; }
   .timah-tech-grid div:nth-child(2n), .timah-tech-grid div:last-child { border-right: 0; }
   .timah-tech-grid div:nth-last-child(-n+2) { border-bottom: 0; }
   .timah-section { padding-top: 28px; padding-bottom: 28px; }
-  .timah-check-list, .timah-section-heading, .timah-evidence-grid, .timah-demo-card, .timah-measurement-layout { grid-template-columns: 1fr; gap: 24px; }
+  .timah-check-list, .timah-section-heading, .timah-evidence-grid, .timah-measurement-layout { grid-template-columns: 1fr; gap: 24px; }
   .timah-challenge-layout { grid-template-columns: 1fr; gap: 28px; }
   .timah-hardware-media img { aspect-ratio: 4 / 3; object-position: center 70%; }
   .timah-architecture-serpent { grid-template-columns: 1fr; grid-template-rows: none; }
@@ -861,8 +853,6 @@ h3 { font-size: 1.45rem; }
   .timah-architecture-serpent > i::after, .timah-architecture-serpent .timah-arrow-reverse::after { right: -3px; left: auto; top: 13px; transform: rotate(135deg); }
   .timah-architecture-serpent > em { display: none; }
   .timah-asset-wide { min-height: 300px; }
-  .timah-demo-card { padding: 28px; }
-  .timah-demo-slot { min-height: 230px; }
 }
 
 @media (max-width: 440px) {
@@ -1411,33 +1401,26 @@ body.lightbox-open { overflow:hidden; }
   .robot-design-layout .robot-rear-visual img { height:auto; }
 }
 
-/* Compact hardware evidence and explicitly simulation-based positioning charts. */
+/* Compact hardware evidence and positioning results. */
 .robot-hardware-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
 .robot-hardware-grid img { width:100%; height:220px; object-fit:contain; background:#edf1f5; }
 .robot-hardware-grid h4 { margin:0 0 6px; color:var(--timah-blue); font-size:.9rem; }
 .robot-hardware-grid figcaption { font-size:.82rem; }
 .robot-position-study { margin-top:28px; }
 .robot-motion-section h3 { color:var(--timah-navy); }
-.robot-chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:20px; }
-.robot-chart { min-width:0; margin:0; padding:16px; border:1px solid #d7e0e9; border-radius:10px; background:#fff; }
-.robot-chart > figcaption { min-height:2.8em; color:var(--timah-navy); font-size:.85rem; font-weight:700; }
-.robot-chart-frame { position:relative; height:230px; }
-.robot-chart canvas { display:block; width:100%; height:100%; }
-.robot-chart canvas[hidden] { display:none; }
-.robot-chart-x,.robot-chart-y { position:absolute; color:#5f6875; font-size:.7rem; pointer-events:none; }
-.robot-chart-x { bottom:0; left:48px; right:12px; text-align:center; }
-.robot-chart-y { top:8px; left:48px; }
-.robot-chart-data { width:100%; font-size:.8rem; text-align:left; border-collapse:collapse; }
-.robot-chart-data td,.robot-chart-data th { padding:3px 8px; }
-.robot-chart-ready .robot-chart-data { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
-.robot-motion-section .robot-chart-note { margin:12px 0 0; font-size:.8rem; }
+.robot-result-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:20px; align-items:start; }
+.robot-result { min-width:0; margin:0; padding:16px; border:1px solid #d7e0e9; border-radius:10px; background:#fff; }
+.robot-result > figcaption { margin-bottom:10px; color:var(--timah-navy); font-size:.85rem; font-weight:700; }
+.robot-result-data { width:100%; font-size:.8rem; text-align:left; border-collapse:collapse; }
+.robot-result-data td,.robot-result-data th { padding:3px 8px; }
 @media (min-width:1200px) {
   .robot-hero .timah-hero-grid { grid-template-columns:minmax(0,78%); }
   .robot-hero h1 { max-width:none; white-space:nowrap; font-size:clamp(2.65rem,3.4vw,3.1rem); }
   .robot-hero .timah-lead { max-width:530px; }
 }
 @media (max-width:960px) {
-  .robot-hardware-grid,.robot-chart-grid { grid-template-columns:minmax(0,1fr); }
+  .robot-hardware-grid,.robot-result-grid { grid-template-columns:minmax(0,1fr); }
   .robot-hardware-grid img { height:auto; max-height:320px; }
-  .robot-chart > figcaption { min-height:0; margin-bottom:8px; }
 }
+
+.robot-motion-section .robot-data-note { margin:8px 0 0; color:#5f6875; font-size:.8rem; }
