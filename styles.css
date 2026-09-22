@@ -1333,7 +1333,7 @@ body.lightbox-open { overflow:hidden; }
 /* Robotic arm: reuse the Timah/CP-Ti sections, cards and disclosure. */
 .robot-hero { min-height:0; padding:20px 0 24px; background:#071a38; }
 .robot-hero::before { inset:0; opacity:1; mask-image:none; background:#fff url("assets/projects/robotic-arm/arm-model-1.jpg") right center / auto 100% no-repeat; }
-.robot-hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,#071a38 0%,#071a38 35%,rgba(7,26,56,.98) 43%,rgba(7,26,56,.78) 54%,rgba(7,26,56,.3) 68%,rgba(7,26,56,0) 84%); }
+.robot-hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,#071a38 0%,#071a38 42%,rgba(7,26,56,.9) 49%,rgba(7,26,56,.38) 59%,rgba(7,26,56,.08) 67%,rgba(7,26,56,0) 73%); }
 .robot-hero .container { z-index:1; }
 .robot-hero .timah-back { margin-bottom:16px; }
 .robot-hero .timah-hero-grid { grid-template-columns:minmax(0,46%); align-items:center; }
@@ -1371,7 +1371,7 @@ body.lightbox-open { overflow:hidden; }
 .project-visual-robot > img { object-fit:contain; object-position:center; background:#fff; }
 @media (max-width:960px) {
   .robot-hero .timah-hero-grid { grid-template-columns:minmax(0,58%); }
-  .robot-hero::after { background:linear-gradient(90deg,#071a38 0%,rgba(7,26,56,.98) 45%,rgba(7,26,56,.65) 66%,rgba(7,26,56,.06) 100%); }
+  .robot-hero::after { background:linear-gradient(90deg,#071a38 0%,rgba(7,26,56,.96) 45%,rgba(7,26,56,.38) 66%,rgba(7,26,56,0) 90%); }
   .robot-overview { grid-template-columns:1fr; gap:0; }
   .robot-overview i { width:1px; height:18px; margin:0 auto; }
   .robot-overview i::after { right:-3px; top:11px; transform:rotate(135deg); }
@@ -1399,15 +1399,45 @@ body.lightbox-open { overflow:hidden; }
 .robot-design-layout { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:72px; align-items:start; }
 .robot-design-layout > div { min-width:0; max-width:620px; }
 .robot-design-layout .timah-section-label { margin:0 0 12px; }
-.robot-design-layout h2 { margin:0 0 16px; }
+.robot-design-layout h2 { margin:0 0 16px; font-size:clamp(2.15rem,3.6vw,3.5rem); }
 .robot-design-layout p:not(.timah-section-label) { margin:0 0 14px; }
 .robot-design-layout p:last-child { margin-bottom:0; }
-.robot-design-layout .robot-system-media { display:grid; grid-template-rows:minmax(0,1fr) auto; align-self:stretch; contain:size; min-height:0; margin:32px 0 0; }
-.robot-design-layout .robot-system-media img { width:100%; height:100%; min-height:0; max-height:none; object-fit:contain; }
-.robot-design-layout figcaption { padding:10px 14px; font-size:.72rem; }
+.robot-design-layout .robot-rear-visual { display:grid; grid-template-rows:minmax(0,1fr); align-self:stretch; justify-self:center; contain:size; min-height:0; width:100%; max-width:480px; margin:32px 0 6px; }
+.robot-design-layout .robot-rear-visual img { display:block; width:100%; height:100%; min-height:0; object-fit:contain; mix-blend-mode:multiply; }
 .robot-design-section + .thesis-case-study > .thesis-disclosure { padding-top:32px; }
 @media (max-width:960px) {
   .robot-design-layout { grid-template-columns:minmax(0,1fr); gap:24px; }
-  .robot-design-layout .robot-system-media { display:block; contain:none; margin-top:0; }
-  .robot-design-layout .robot-system-media img { height:auto; aspect-ratio:auto; }
+  .robot-design-layout .robot-rear-visual { display:block; contain:none; margin:0; }
+  .robot-design-layout .robot-rear-visual img { height:auto; }
+}
+
+/* Compact hardware evidence and explicitly simulation-based positioning charts. */
+.robot-hardware-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.robot-hardware-grid img { width:100%; height:220px; object-fit:contain; background:#edf1f5; }
+.robot-hardware-grid h4 { margin:0 0 6px; color:var(--timah-blue); font-size:.9rem; }
+.robot-hardware-grid figcaption { font-size:.82rem; }
+.robot-position-study { margin-top:28px; }
+.robot-motion-section h3 { color:var(--timah-navy); }
+.robot-chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:20px; }
+.robot-chart { min-width:0; margin:0; padding:16px; border:1px solid #d7e0e9; border-radius:10px; background:#fff; }
+.robot-chart > figcaption { min-height:2.8em; color:var(--timah-navy); font-size:.85rem; font-weight:700; }
+.robot-chart-frame { position:relative; height:230px; }
+.robot-chart canvas { display:block; width:100%; height:100%; }
+.robot-chart canvas[hidden] { display:none; }
+.robot-chart-x,.robot-chart-y { position:absolute; color:#5f6875; font-size:.7rem; pointer-events:none; }
+.robot-chart-x { bottom:0; left:48px; right:12px; text-align:center; }
+.robot-chart-y { top:8px; left:48px; }
+.robot-chart-data { width:100%; font-size:.8rem; text-align:left; border-collapse:collapse; }
+.robot-chart-data td,.robot-chart-data th { padding:3px 8px; }
+.robot-chart-ready .robot-chart-data { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.robot-motion-section .robot-chart-note { margin:12px 0 0; font-size:.8rem; }
+@media (min-width:1200px) {
+  .robot-hero .timah-hero-grid { grid-template-columns:minmax(0,78%); }
+  .robot-hero h1 { max-width:none; white-space:nowrap; font-size:clamp(2.65rem,3.4vw,3.1rem); }
+  .robot-hero .timah-lead { max-width:530px; }
+}
+@media (max-width:960px) {
+  .robot-hardware-grid,.robot-chart-grid { grid-template-columns:minmax(0,1fr); }
+  .robot-hardware-grid img { height:auto; max-height:320px; }
+  .robot-chart > figcaption { min-height:0; margin-bottom:8px; }
 }
